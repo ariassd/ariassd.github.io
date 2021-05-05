@@ -28,9 +28,11 @@ const Header = () => {
                       setColorPickerVisible(true);
                     }}
                   >
-                    <button className="theme-picker">
-                      <BiColorFill />
-                    </button>
+                    {false && (
+                      <button className="theme-picker">
+                        <BiColorFill />
+                      </button>
+                    )}
                   </a>
                 </div>
                 <button
