@@ -88,7 +88,7 @@ const about = {
   hideCv: true,
   hidePhone: true,
   cv: '',
-  formspree: 'https://formspree.io',
+  formspree: 'https://formspree.io/f/xzbydyqb',
   taglines: [
     'FULL STACK DEVELOPER',
     'WEB APPLICATION DEVELOPER',
