@@ -15,6 +15,7 @@ import {
   SiJquery,
   SiMysql,
   SiMongodb,
+  SiCsharp,
 } from 'react-icons/si';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 import { RiFacebookCircleFill } from 'react-icons/ri';
@@ -167,6 +168,14 @@ const skills = [
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
         <SiJquery />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    title: '.net framework',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
+        <SiCsharp />
       </IconContext.Provider>
     ),
   },

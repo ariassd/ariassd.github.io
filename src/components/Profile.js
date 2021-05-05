@@ -13,7 +13,9 @@ const Profile = () => {
             <div
               className="page-header-image"
               data-parallax="true"
-              style={{ backgroundImage: "url('assets/img/cc-bg-1.jpg')" }}
+              style={{
+                backgroundImage: "url('assets/img/frog2.png')",
+              }}
             ></div>
             <div className="container">
               <div className="content-center">
