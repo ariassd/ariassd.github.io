@@ -38,6 +38,30 @@ const getExperienceDuration = (units = ['y', 'mo']) => {
   });
 };
 
+const defaultThemeColor = {
+  hsl: {
+    h: 0,
+    s: 1,
+    l: 0.4,
+    a: 1,
+  },
+  hex: '#cc0000',
+  rgb: {
+    r: 204,
+    g: 0,
+    b: 0,
+    a: 1,
+  },
+  hsv: {
+    h: 0,
+    s: 1,
+    v: 0.8,
+    a: 1,
+  },
+  oldHue: 352.71844660194176,
+  source: 'hex',
+};
+
 const about = {
   name: 'Luis Arias',
   details: (
@@ -657,6 +681,7 @@ const socialLinks = [
 ];
 
 const Data = {
+  defaultThemeColor,
   about,
   skills,
   projects,
