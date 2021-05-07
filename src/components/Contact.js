@@ -40,7 +40,21 @@ const Contact = () => {
                   data-aos-offset="10"
                 >
                   <Row justify="center" align="middle">
-                    <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+                    {!Data.about.hideMap && (
+                      <Col xl={10} lg={10} md={10} sm={10} xs={10}>
+                        <iframe
+                          src={Data.about.googleEmbeddedMapUrl}
+                          width="100%"
+                          height="350"
+                          style={{
+                            border: 0,
+                          }}
+                          allowFullScreen
+                          loading="lazy"
+                        ></iframe>
+                      </Col>
+                    )}
+                    <Col xl={10} lg={10} md={10} sm={10} xs={10}>
                       <div className="card-body">
                         <form
                           action={Data.about.formspree}
@@ -126,12 +140,13 @@ const Contact = () => {
                         </form>
                       </div>
                     </Col>
+
                     <Col
-                      xl={12}
-                      lg={12}
-                      md={24}
-                      sm={24}
-                      xs={24}
+                      xl={4}
+                      lg={4}
+                      md={4}
+                      sm={4}
+                      xs={4}
                       style={{ textAlign: 'center' }}
                     >
                       <div className="card-body">
@@ -149,20 +164,25 @@ const Contact = () => {
                             </p>
                           </React.Fragment>
                         )}
-                        <p className="mb-0">
-                          <strong>Email</strong>
-                        </p>
-                        <p>
-                          <a
-                            href={'mailto:' + Data.about.email}
-                            target="_blank"
-                            data-type="mail"
-                            className="text-muted"
-                            rel="noopener noreferrer"
-                          >
-                            {Data.about.email}
-                          </a>
-                        </p>
+                        {!Data.about.hideEmail && (
+                          <React.Fragment>
+                            <p className="mb-0">
+                              <strong>Email</strong>
+                            </p>
+
+                            <p>
+                              <a
+                                href={'mailto:' + Data.about.email}
+                                target="_blank"
+                                data-type="mail"
+                                className="text-muted"
+                                rel="noopener noreferrer"
+                              >
+                                {Data.about.email}
+                              </a>
+                            </p>
+                          </React.Fragment>
+                        )}
                         {!Data.about.hideCv && (
                           <React.Fragment>
                             <p className="mb-0">
