@@ -588,7 +588,7 @@ const education = [
     info: [
       {
         title: 'TOEIC',
-        value: 690,
+        value: 'B1',
       },
     ],
   },
