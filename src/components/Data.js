@@ -265,6 +265,39 @@ const projects = [
     ],
   },
   {
+    title: 'Easy ws api proxy',
+    thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
+    images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    skills: [
+      {
+        title: 'Typescript.js',
+        color: '#31B2FB',
+      },
+      {
+        title: 'Node.js',
+        color: '#5C9553',
+      },
+    ],
+    categories: ['Package'],
+    description: (
+      <React.Fragment>
+        This package will help you to send requests to web socket using a simple
+        API rest. Useful for development proposes, using this tool you can send
+        socket.io requests from postman or similar tools and get the result
+      </React.Fragment>
+    ),
+    links: [
+      {
+        title: 'Homepage',
+        url: 'github.com/ariassd/easy-wsapiproxy',
+      },
+      {
+        title: 'NPM',
+        url: 'https://www.npmjs.com/package/easy-wsapiproxy',
+      },
+    ],
+  },
+  {
     title: 'Easy JSON Diff',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
@@ -529,8 +562,7 @@ const projects = [
       },
       {
         title: 'Visual Studio',
-        url:
-          'https://marketplace.visualstudio.com/items?itemName=ariassd.terminal-loader',
+        url: 'https://marketplace.visualstudio.com/items?itemName=ariassd.terminal-loader',
       },
     ],
   },
@@ -561,9 +593,9 @@ const experiences = [
     company: 'Corporación BCT S.A ',
     from: '2008',
     to: '2018',
-    position: 'Senior Software engineer',
+    position: 'Senior Software engineer / software architect',
     responsibilities: [
-      'Develop, support, improvements and continuous integration of the on-line banking system. ',
+      'Develop, software design, support, improvements and continuous integration of the on-line banking system.',
       'Technologies: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
     ],
   },
