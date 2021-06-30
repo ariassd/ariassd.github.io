@@ -18,7 +18,7 @@ import {
   SiCsharp,
 } from 'react-icons/si';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
-import { RiFacebookCircleFill } from 'react-icons/ri';
+import { RiFacebookCircleFill, RiTwitterFill } from 'react-icons/ri';
 import { IconContext } from 'react-icons';
 import { ImMail4 } from 'react-icons/im';
 import moment from 'moment';
@@ -82,8 +82,9 @@ const about = {
       </ul>
       <p>
         I have been creating, designing, fixing and editing software over 12
-        years, I have worked for a large company as a software engineer and now
-        I'm starting my own startup.
+        years, Now I'm working with cutting edge technologies in a innovative 
+        company with operations center in Costa Rica, which is part of a big 
+        company located in Switzerland
       </p>
       <p>
         I have created, developed, invented and implement lot of automation
@@ -102,6 +103,9 @@ const about = {
         I have worked with clients around the world. I have no problem doing
         business with any location . I can help you to develop or improve
         software for your business.
+      </p>
+      <p>
+        
       </p>
     </React.Fragment>
   ),
@@ -236,6 +240,42 @@ const skills = [
 
 const projects = [
   {
+    title: 'Techoryze platform',
+    thumbnail: process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sm.png',
+    images: [
+      process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc1.png',
+      process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc2.png',
+      process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc3.png',
+  ],
+    skills: [
+      {
+        title: 'Typescript.js',
+        color: '#31B2FB',
+      },
+      {
+        title: 'Node.js',
+        color: '#5C9553',
+      },
+    ],
+    categories: ['Web site'],
+    description: (
+      <React.Fragment>
+        <p>
+          Techoryze Delivers the Real-Time Learning Support Needed by Educators to Accelerate Technology Use in the Classroom
+        </p>
+        <p>
+          Techoryze was started to solve a simple problem: to make technology easier for educators. More than 80% think they don’t get enough technology professional development. This limits their ability to integrate technology into their curriculum, and to support their students in becoming more tech-savvy.
+        </p>
+      </React.Fragment>
+    ),
+    links: [
+      {
+        title: 'Homepage',
+        url: 'http://www.techoryze.com',
+      },
+    ],
+  },
+  {
     title: 'Easy CSV 2 JSON',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
@@ -251,7 +291,7 @@ const projects = [
     ],
     categories: ['Package'],
     description: (
-      <React.Fragment>Convert from simple CSV file to JSON </React.Fragment>
+      <React.Fragment>Convert from simple CSV file to JSON. With this powerful tool you will be able to process CSV files and make calculations in seconds</React.Fragment>
     ),
     links: [
       {
@@ -281,7 +321,7 @@ const projects = [
     categories: ['Package'],
     description: (
       <React.Fragment>
-        This package will help you to send requests to web socket using a simple
+        This package will help you to send requests to socket.io using a simple
         API rest. Useful for development proposes, using this tool you can send
         socket.io requests from postman or similar tools and get the result
       </React.Fragment>
@@ -341,7 +381,7 @@ const projects = [
     categories: ['Package'],
     description: (
       <React.Fragment>
-        The easiest way to generate a markdown document from postman.
+        The easiest way to generate a markdown document from postman documentation, with this tool you also apply stylish and customization to your documents.
       </React.Fragment>
     ),
     links: [
@@ -571,11 +611,24 @@ const projects = [
 const experiences = [
   {
     company: 'Gamanza Costa Rica',
-    from: '2020',
+    from: '2021',
     to: 'present',
+    position: 'Backend lead',
+    responsibilities: [
+      'Team management',
+      'Decision making process',
+      'Software architecture',
+      'Gamanza CRM system implementation',
+      'Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+    ],
+  },
+  {
+    company: 'Gamanza Costa Rica',
+    from: '2020',
+    to: '2021',
     position: 'Senior Back end developer',
     responsibilities: [
-      'Gamanza CRM',
+      'Gamanza CRM system implementation',
       'Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
     ],
   },
@@ -713,6 +766,16 @@ const socialLinks = [
       </IconContext.Provider>
     ),
     link: 'https://www.facebook.com/ariassl',
+  },
+  {
+    title: 'twitter',
+    icon: (
+      <IconContext.Provider value={{ size: '1.5rem' }}>
+
+        <RiTwitterFill />
+      </IconContext.Provider>
+    ),
+    link: 'https://www.twitter.com/ariassd',
   },
   {
     title: 'email',
