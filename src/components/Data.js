@@ -127,6 +127,17 @@ const about = {
     'WEB APPLICATION DEVELOPER',
     'SOFTWARE ENGINEER',
   ],
+  cryptoAccounts: [
+    { 
+      type: 'Bitcoin',
+      account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc'
+    }, 
+    { 
+      type: 'Ethereum',
+      account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621'
+    }, 
+
+  ]
 };
 
 const skills = [
@@ -613,7 +624,7 @@ const experiences = [
     company: 'Gamanza Costa Rica',
     from: '2021',
     to: 'present',
-    position: 'Backend lead',
+    position: 'Technical Lead',
     responsibilities: [
       'Team management',
       'Decision making process',
@@ -630,6 +641,16 @@ const experiences = [
     responsibilities: [
       'Gamanza CRM system implementation',
       'Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+    ],
+  },
+  {
+    company: 'Techoryze',
+    from: '2021',
+    to: '2021',
+    position: 'Full stack developer ( freelance )',
+    responsibilities: [
+      'Techoryze platform design and implementation https://techoryze.com',
+      'Typescript, NestJs, ReactJs, MongoDb'
     ],
   },
   {

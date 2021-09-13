@@ -51,6 +51,7 @@ const Contact = () => {
                           }}
                           allowFullScreen
                           loading="lazy"
+                          title="map"
                         ></iframe>
                       </Col>
                     )}
@@ -207,10 +208,19 @@ const Contact = () => {
                       </div>
                     </Col>
                   </Row>
+                  
                 </Card>
               </Col>
             </Row>
+            
           </StyledContainer>
+          { Data.about.cryptoAccounts.map(i => 
+            <Row justify="center" align="middle">
+              <Col xl={4} lg={4} md={4} sm={4} xs={4}><b>{i.type}: </b></Col>
+              <Col xl={4} lg={4} md={4} sm={4} xs={4}><p>{i.account}</p></Col>
+              <Col xl={4} lg={4} md={4} sm={4} xs={4}></Col>
+            </Row>
+          ) }
         </div>
       </div>
     </React.Fragment>
