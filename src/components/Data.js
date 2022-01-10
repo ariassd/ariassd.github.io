@@ -27,7 +27,7 @@ import HumanizeDuration from 'humanize-duration';
 const skillIconSize = '4rem';
 
 const getExperienceDuration = (units = ['y', 'mo']) => {
-  let starts = moment('2018-08-16');
+  let starts = moment('2008-08-16');
   let ends = moment();
 
   let duration = moment.duration(ends.diff(starts));
@@ -82,8 +82,8 @@ const about = {
       </ul>
       <p>
         I have been creating, designing, fixing and editing software over 12
-        years, Now I'm working with cutting edge technologies in a innovative 
-        company with operations center in Costa Rica, which is part of a big 
+        years, Now I'm working with cutting edge technologies in a innovative
+        company with operations center in Costa Rica, which is part of a big
         company located in Switzerland
       </p>
       <p>
@@ -104,9 +104,7 @@ const about = {
         business with any location . I can help you to develop or improve
         software for your business.
       </p>
-      <p>
-        
-      </p>
+      <p></p>
     </React.Fragment>
   ),
   phone: '8735-3483',
@@ -128,16 +126,15 @@ const about = {
     'SOFTWARE ENGINEER',
   ],
   cryptoAccounts: [
-    { 
+    {
       type: 'Bitcoin',
-      account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc'
-    }, 
-    { 
+      account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc',
+    },
+    {
       type: 'Ethereum',
-      account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621'
-    }, 
-
-  ]
+      account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621',
+    },
+  ],
 };
 
 const skills = [
@@ -257,7 +254,7 @@ const projects = [
       process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc1.png',
       process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc2.png',
       process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc3.png',
-  ],
+    ],
     skills: [
       {
         title: 'Typescript.js',
@@ -272,10 +269,15 @@ const projects = [
     description: (
       <React.Fragment>
         <p>
-          Techoryze Delivers the Real-Time Learning Support Needed by Educators to Accelerate Technology Use in the Classroom
+          Techoryze Delivers the Real-Time Learning Support Needed by Educators
+          to Accelerate Technology Use in the Classroom
         </p>
         <p>
-          Techoryze was started to solve a simple problem: to make technology easier for educators. More than 80% think they don’t get enough technology professional development. This limits their ability to integrate technology into their curriculum, and to support their students in becoming more tech-savvy.
+          Techoryze was started to solve a simple problem: to make technology
+          easier for educators. More than 80% think they don’t get enough
+          technology professional development. This limits their ability to
+          integrate technology into their curriculum, and to support their
+          students in becoming more tech-savvy.
         </p>
       </React.Fragment>
     ),
@@ -302,7 +304,10 @@ const projects = [
     ],
     categories: ['Package'],
     description: (
-      <React.Fragment>Convert from simple CSV file to JSON. With this powerful tool you will be able to process CSV files and make calculations in seconds</React.Fragment>
+      <React.Fragment>
+        Convert from simple CSV file to JSON. With this powerful tool you will
+        be able to process CSV files and make calculations in seconds
+      </React.Fragment>
     ),
     links: [
       {
@@ -392,7 +397,9 @@ const projects = [
     categories: ['Package'],
     description: (
       <React.Fragment>
-        The easiest way to generate a markdown document from postman documentation, with this tool you also apply stylish and customization to your documents.
+        The easiest way to generate a markdown document from postman
+        documentation, with this tool you also apply stylish and customization
+        to your documents.
       </React.Fragment>
     ),
     links: [
@@ -650,7 +657,7 @@ const experiences = [
     position: 'Full stack developer ( freelance )',
     responsibilities: [
       'Techoryze platform design and implementation https://techoryze.com',
-      'Typescript, NestJs, ReactJs, MongoDb'
+      'Typescript, NestJs, ReactJs, MongoDb',
     ],
   },
   {
@@ -792,7 +799,6 @@ const socialLinks = [
     title: 'twitter',
     icon: (
       <IconContext.Provider value={{ size: '1.5rem' }}>
-
         <RiTwitterFill />
       </IconContext.Provider>
     ),
