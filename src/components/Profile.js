@@ -23,7 +23,9 @@ const Profile = () => {
                   {/* eslint-disable-next-line */}
                   <a href="#">
                     <Image
-                      src={process.env.PUBLIC_URL + '/assets/img/luisarias.jpg'}
+                      src={
+                        process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'
+                      }
                       preview={false}
                       placeholder={
                         <Image
