@@ -1,16 +1,16 @@
+import { Card, Col, Row, Typography } from 'antd';
 import React from 'react';
-import ReactiveButton from 'reactive-button';
-import Data from './Data';
-import { ImFilePdf } from 'react-icons/im';
 import { IconContext } from 'react-icons';
 import {
   FaEnvelope,
   FaFileAlt,
   FaPaperPlane,
-  FaUserCircle,
+  FaUserCircle
 } from 'react-icons/fa';
+import { ImFilePdf } from 'react-icons/im';
+import ReactiveButton from 'reactive-button';
+import Data from './Data';
 import StyledContainer from './StyledContainer';
-import { Card, Col, Row, Typography } from 'antd';
 
 const Contact = () => {
   return (
@@ -208,19 +208,22 @@ const Contact = () => {
                       </div>
                     </Col>
                   </Row>
-                  
                 </Card>
               </Col>
             </Row>
-            
           </StyledContainer>
-          { Data.about.cryptoAccounts.map(i => 
-            <Row justify="center" align="middle">
-              <Col xl={4} lg={4} md={4} sm={4} xs={4}><b>{i.type}: </b></Col>
-              <Col xl={4} lg={4} md={4} sm={4} xs={4}><p>{i.account}</p></Col>
-              <Col xl={4} lg={4} md={4} sm={4} xs={4}></Col>
-            </Row>
-          ) }
+          {Data.about.paymentMethods.crypto.show &&
+            Data.about.paymentMethods.crypto.accounts.map((i) => (
+              <Row justify="center" align="middle">
+                <Col xl={4} lg={4} md={4} sm={4} xs={4}>
+                  <b>{i.type}: </b>
+                </Col>
+                <Col xl={4} lg={4} md={4} sm={4} xs={4}>
+                  <p>{i.account}</p>
+                </Col>
+                <Col xl={4} lg={4} md={4} sm={4} xs={4}></Col>
+              </Row>
+            ))}
         </div>
       </div>
     </React.Fragment>

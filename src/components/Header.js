@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Data from './Data';
 import { BiColorFill } from 'react-icons/bi';
 import ColorPickerPopup from './ColorPickerPopup';
+import Data from './Data';
 
 const Header = () => {
   const [colorPickerVisible, setColorPickerVisible] = useState(false);
@@ -84,6 +84,16 @@ const Header = () => {
                       Contact
                     </a>
                   </li>
+                  {Data.about.paymentMethods.donate.show &&
+                    false &&
+                    Data.about.paymentMethods.donate.accounts.length > 0 && (
+                      <li className="nav-item">
+                        <a className="nav-link smooth-scroll" href="#donate">
+                          {Data.about.paymentMethods.donate.accounts[0].icon}
+                        </a>
+                      </li>
+                    )}
+
                   <li className="nav-item pl-lg-5 theme-picker-wrapper d-none d-lg-block">
                     <a
                       href="/#"

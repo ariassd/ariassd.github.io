@@ -1,28 +1,29 @@
+import HumanizeDuration from 'humanize-duration';
+import moment from 'moment';
 import React from 'react';
+import { IconContext } from 'react-icons';
+import { BiDonateHeart } from 'react-icons/bi';
 import {
   FaBootstrap,
   FaGithub,
-  FaGitlab,
   FaGithubAlt,
+  FaGitlab,
   FaNode,
+  FaNodeJs,
   FaReact,
   FaVuejs,
-  FaNodeJs,
 } from 'react-icons/fa';
+import { ImMail4 } from 'react-icons/im';
+import { RiFacebookCircleFill, RiTwitterFill } from 'react-icons/ri';
 import {
+  SiCsharp,
   SiCss3,
   SiJavascript,
   SiJquery,
-  SiMysql,
   SiMongodb,
-  SiCsharp,
+  SiMysql,
 } from 'react-icons/si';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
-import { RiFacebookCircleFill, RiTwitterFill } from 'react-icons/ri';
-import { IconContext } from 'react-icons';
-import { ImMail4 } from 'react-icons/im';
-import moment from 'moment';
-import HumanizeDuration from 'humanize-duration';
 
 const skillIconSize = '4rem';
 
@@ -125,16 +126,36 @@ const about = {
     'WEB APPLICATION DEVELOPER',
     'SOFTWARE ENGINEER',
   ],
-  cryptoAccounts: [
-    {
-      type: 'Bitcoin',
-      account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc',
+  paymentMethods: {
+    crypto: {
+      show: false,
+      accounts: [
+        {
+          type: 'Bitcoin',
+          account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc',
+        },
+        {
+          type: 'Ethereum',
+          account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621',
+        },
+      ],
     },
-    {
-      type: 'Ethereum',
-      account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621',
+    donate: {
+      show: true,
+      accounts: [
+        {
+          title: "Keep moving forward! I'll support you",
+          type: 'Paypal',
+          account: 'https://paypal.me/LuisAriasCR?country.x=CR&locale.x=en_US',
+          icon: (
+            <IconContext.Provider value={{ size: '1.9rem' }}>
+              <BiDonateHeart />
+            </IconContext.Provider>
+          ),
+        },
+      ],
     },
-  ],
+  },
 };
 
 const skills = [
@@ -247,6 +268,41 @@ const skills = [
 ];
 
 const projects = [
+  {
+    title: 'Easy Portforward',
+    thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
+    images: [
+      process.env.PUBLIC_URL +
+        '/assets/img/projects/easy-portforward/screenshot.png',
+    ],
+    skills: [
+      {
+        title: 'express, websocket',
+        color: '#31B2FB',
+      },
+      {
+        title: 'Node.js',
+        color: '#5C9553',
+      },
+    ],
+    categories: ['Package'],
+    description: (
+      <React.Fragment>
+        This is a tiny tool installed via npm that allows you to manage and
+        connect kubernetes services using port forward in an easy way.
+      </React.Fragment>
+    ),
+    links: [
+      {
+        title: 'Homepage',
+        url: 'https://github.com/ariassd/easy-portforward',
+      },
+      {
+        title: 'NPM',
+        url: 'https://www.npmjs.com/package/easy-portforward',
+      },
+    ],
+  },
   {
     title: 'Techoryze platform',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sm.png',
