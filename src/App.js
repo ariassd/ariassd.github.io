@@ -9,7 +9,7 @@ import Profile from './components/Profile';
 import Project from './components/Project';
 import Skill from './components/Skill';
 import { ThemeContext } from './contexts/ThemeContext';
-import 'antd/dist/antd.css';
+import 'antd/dist/reset.css';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
 import Data from './components/Data';
 

@@ -1,4 +1,5 @@
-import { Avatar, Card, Col, Comment, Typography, Row } from 'antd';
+import { Avatar, Card, Col, Typography, Row } from 'antd';
+import { Comment } from '@ant-design/compatible';
 import React, { useEffect, useState } from 'react';
 import { useBreakpoint } from '../hooks/breakpoint';
 import Data from './Data';
