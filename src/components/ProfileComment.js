@@ -3,7 +3,7 @@ import { Card, Typography } from 'antd';
 
 const { Paragraph } = Typography;
 
-const ProfileComment = ({ Data, isMD }) => {
+const ProfileComment = ({ Data }) => {
   return (
     <Card
       style={{ marginBottom: 16, border: '1px solid #f0f0f0' }}

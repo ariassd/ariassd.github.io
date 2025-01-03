@@ -26,41 +26,98 @@ const Skill = () => {
             </Col>
             <Col span={24}>
               <Row justify="center" gutter={24}>
-                {skills.map((skill, index) => (
-                  <Col
-                    key={index}
-                    xl={4}
-                    lg={4}
-                    md={8}
-                    sm={12}
-                    xs={12}
-                    style={{ marginBottom: 24 }}
-                    data-aos="zoom-in"
-                    data-aos-offset="10"
-                  >
-                    <Card
-                      hoverable
-                      loading={loading}
-                      size="small"
-                      style={{ textAlign: 'center', cursor: 'default' }}
-                      className="z-shadow z-hover"
+                {skills
+                  .filter((i) => i.type === 'hard')
+                  .map((skill, index) => (
+                    <Col
+                      key={index}
+                      xl={4}
+                      lg={4}
+                      md={8}
+                      sm={12}
+                      xs={12}
+                      style={{ marginBottom: 24 }}
                       data-aos="zoom-in"
-                      bordered={true}
+                      data-aos-offset="10"
                     >
-                      <Space direction="vertical">
-                        <div>{skill.icon}</div>
-                        <div>
-                          <Typography.Text
-                            style={{ width: '100%', color: 'grey' }}
-                            ellipsis={{ tooltip: skill.title }}
-                          >
-                            {skill.title}
-                          </Typography.Text>
-                        </div>
-                      </Space>
-                    </Card>
-                  </Col>
-                ))}
+                      <Card
+                        hoverable
+                        loading={loading}
+                        size="small"
+                        style={{ textAlign: 'center', cursor: 'default' }}
+                        className="z-shadow z-hover"
+                        data-aos="zoom-in"
+                        bordered={true}
+                      >
+                        <Space direction="vertical">
+                          <div>{skill.icon}</div>
+                          <div>
+                            <Typography.Text
+                              style={{ width: '100%', color: 'grey' }}
+                              ellipsis={{ tooltip: skill.title }}
+                            >
+                              {skill.title}
+                            </Typography.Text>
+                          </div>
+                        </Space>
+                      </Card>
+                    </Col>
+                  ))}
+              </Row>
+            </Col>
+          </Row>
+        </StyledContainer>
+      </div>
+      <div className="section" id="skill">
+        <StyledContainer>
+          <Row>
+            <Col span={24}>
+              <Typography.Title
+                level={3}
+                style={{ textAlign: 'center', marginBottom: '2rem' }}
+              >
+                Soft Skills
+              </Typography.Title>
+            </Col>
+            <Col span={24}>
+              <Row justify="center" gutter={24}>
+                {skills
+                  .filter((i) => i.type === 'soft')
+                  .map((skill, index) => (
+                    <Col
+                      key={index}
+                      xl={4}
+                      lg={4}
+                      md={8}
+                      sm={12}
+                      xs={12}
+                      style={{ marginBottom: 24 }}
+                      data-aos="zoom-in"
+                      data-aos-offset="10"
+                    >
+                      <Card
+                        hoverable
+                        loading={loading}
+                        size="small"
+                        style={{ textAlign: 'center', cursor: 'default' }}
+                        className="z-shadow z-hover"
+                        data-aos="zoom-in"
+                        bordered={true}
+                      >
+                        <Space direction="vertical">
+                          <div>{skill.icon}</div>
+                          <div>
+                            <Typography.Text
+                              style={{ width: '100%', color: 'grey' }}
+                              ellipsis={{ tooltip: skill.title }}
+                            >
+                              {skill.title}
+                            </Typography.Text>
+                          </div>
+                        </Space>
+                      </Card>
+                    </Col>
+                  ))}
               </Row>
             </Col>
           </Row>

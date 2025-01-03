@@ -1,4 +1,3 @@
-import HumanizeDuration from 'humanize-duration';
 import moment from 'moment';
 import React from 'react';
 import { IconContext } from 'react-icons';
@@ -9,12 +8,21 @@ import {
   FaGithubAlt,
   FaGitlab,
   FaNode,
-  FaNodeJs,
   FaReact,
   FaVuejs,
+  FaBalanceScaleRight,
+  FaGraduationCap,
 } from 'react-icons/fa';
+import { SiNestjs, SiConfluence, SiUpwork } from 'react-icons/si';
+import { DiScrum, DiJira } from 'react-icons/di';
 import { ImMail4 } from 'react-icons/im';
-import { RiFacebookCircleFill, RiTwitterFill } from 'react-icons/ri';
+import { GiArcheryTarget, GiOpenBook, GiCompass } from 'react-icons/gi';
+import { RiTwitterFill } from 'react-icons/ri';
+import { FaHandsHoldingChild } from 'react-icons/fa6';
+import { LuBrainCircuit } from 'react-icons/lu';
+import { TbClockDollar } from 'react-icons/tb';
+import { FcBinoculars } from 'react-icons/fc';
+
 import {
   // SiCsharp,
   SiCss3,
@@ -28,17 +36,16 @@ import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const skillIconSize = '4rem';
 
-const getExperienceDuration = (units = ['y', 'mo']) => {
-  let starts = moment('2008-08-16');
-  let ends = moment();
+const getExperienceDuration = () => {
+  return `${getExperienceDurationNumber()}+ years of experience`;
+};
 
-  let duration = moment.duration(ends.diff(starts));
-
-  return HumanizeDuration(duration, {
-    units: units,
-    round: true,
-    delimiter: ' and ',
-  });
+const getExperienceDurationNumber = () => {
+  const starts = moment('2008-08-16');
+  const ends = moment();
+  const duration = moment.duration(ends.diff(starts));
+  const years = Math.floor(duration.asYears());
+  return years;
 };
 
 const defaultThemeColor = {
@@ -70,23 +77,26 @@ const about = {
   details: (
     <React.Fragment>
       <p>
-        I'm a professional full-stack since 2008 I really like looking for
+        I&apos;m a professional full-stack since 2008 I really like looking for
         perfection in everything I do.
       </p>
       <ul>
+        <li>✓ Leadership.</li>
+        <li>✓ Mentoring.</li>
         <li>✓ Process automation.</li>
-        <li>✓ Full-stack.</li>
+        <li>✓ Full-stack developer.</li>
         <li>✓ NodeJS, NestJS, React, Angular</li>
         <li>✓ Framework .NET (C#, VB)</li>
         <li>✓ Typescript, javascript, jQuery</li>
         <li>✓ Database (SQL, Mysql, PostgreSQL, MongoDB, sqlite)</li>
-        <li>✓ PHP, Python.</li>
+        <li>✓ Others like PHP, Python.</li>
       </ul>
       <p>
-        I have been creating, designing, fixing and editing software over 12
-        years, Now I'm working with cutting edge technologies in a innovative
-        company with operations center in Costa Rica, which is part of a big
-        company located in Switzerland
+        I have been creating, designing, fixing and editing software over{' '}
+        {getExperienceDurationNumber()}+ years, Nowadays I am part of the
+        leadership team and I&apos;m working with cutting edge technologies in a
+        innovative company with operations center in Costa Rica, which is part
+        of a big company located in Switzerland.
       </p>
       <p>
         I have created, developed, invented and implement lot of automation
@@ -103,7 +113,7 @@ const about = {
       </p>
       <p>
         I have worked with clients around the world. I have no problem doing
-        business with any location . I can help you to develop or improve
+        business with any location. I can help you to develop or improve
         software for your business.
       </p>
       <p></p>
@@ -114,6 +124,7 @@ const about = {
   address: 'El Roble, Heredia, CR',
   university: 'Universidad Nacional de Costa Rica',
   github: 'https://github.com/ariassd',
+  upWork: 'https://www.upwork.com/freelancers/~01eb5047d927060e0f',
   googleEmbeddedMapUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.3263166936113!2d-84.15768331774679!3d10.072325737623318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA0JzIwLjQiTiA4NMKwMDknMjIuMSJX!5e0!3m2!1sen!2scr!4v1620427865488!5m2!1sen!2scr',
   hideCv: true,
@@ -126,6 +137,7 @@ const about = {
     'FULL STACK DEVELOPER',
     'WEB APPLICATION DEVELOPER',
     'SOFTWARE ENGINEER',
+    'ENGINEER MANAGER',
   ],
   paymentMethods: {
     crypto: {
@@ -161,15 +173,125 @@ const about = {
 
 const skills = [
   {
-    title: 'NestJS',
+    type: 'soft',
+    title: 'Leadership',
     icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#7377AD' }}>
-        <FaNodeJs />
+      <IconContext.Provider value={{ size: skillIconSize, color: '#FF5733' }}>
+        <GiCompass />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Team building',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#1E90FF' }}>
+        <FaHandsHoldingChild />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Resilient',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#6A5ACD' }}>
+        <LuBrainCircuit />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Problem solving',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#FFD700' }}>
+        <GiArcheryTarget />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Work Ethic',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#8B4513' }}>
+        <FaBalanceScaleRight />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Transparency',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#00CED1' }}>
+        <GiOpenBook />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Time management',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#FF4500' }}>
+        <TbClockDollar />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Curiosity',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#7B68EE' }}>
+        <FcBinoculars />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'soft',
+    title: 'Continuous learning',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#4682B4' }}>
+        <FaGraduationCap />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'hard',
+    title: 'SCRUM',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#007ACC' }}>
+        <DiScrum />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'hard',
+    title: 'Jira',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#0052CC' }}>
+        <DiJira />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'hard',
+    title: ' Confluence',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#172B4D' }}>
+        <SiConfluence />
       </IconContext.Provider>
     ),
   },
 
   {
+    type: 'hard',
+    title: 'NestJS',
+    icon: (
+      <IconContext.Provider value={{ size: skillIconSize, color: '#E0234E' }}>
+        <SiNestjs />
+      </IconContext.Provider>
+    ),
+  },
+  {
+    type: 'hard',
     title: 'JavaScript',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#E1CC1B' }}>
@@ -178,6 +300,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'React.js',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#31B2FB' }}>
@@ -186,6 +309,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'Vue.js',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#42B983' }}>
@@ -194,6 +318,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'Node.js',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#5C9553' }}>
@@ -202,6 +327,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'jQuery',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
@@ -210,6 +336,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: '.net framework',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
@@ -219,6 +346,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'MySQL',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#4479A1' }}>
@@ -227,6 +355,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'MongoDB',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#4479A1' }}>
@@ -235,6 +364,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'GitHub',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#F44D27' }}>
@@ -243,6 +373,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'GitLab',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#F44D27' }}>
@@ -251,6 +382,7 @@ const skills = [
     ),
   },
   {
+    type: 'hard',
     title: 'CSS',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#2862E9' }}>
@@ -258,8 +390,8 @@ const skills = [
       </IconContext.Provider>
     ),
   },
-
   {
+    type: 'hard',
     title: 'Bootstrap',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#533B78' }}>
@@ -332,7 +464,7 @@ const projects = [
         </p>
         <p>
           Techoryze was started to solve a simple problem: to make technology
-          easier for educators. More than 80% think they don’t get enough
+          easier for educators. More than 80% think they don&apos;t get enough
           technology professional development. This limits their ability to
           integrate technology into their curriculum, and to support their
           students in becoming more tech-savvy.
@@ -610,8 +742,8 @@ const projects = [
     description: (
       <React.Fragment>
         Simple address book made with Visual Studio for Mac (Community) and
-        MongoDB. This project doesn't have any type of security in this first
-        version.
+        MongoDB. This project doesn&apos;t have any type of security in this
+        first version.
       </React.Fragment>
     ),
     links: [
@@ -689,13 +821,14 @@ const experiences = [
     company: 'Gamanza Costa Rica',
     from: '2021',
     to: 'present',
-    position: 'Technical Lead',
+    position: 'Leadership',
     responsibilities: [
-      'Team management',
-      'Decision making process',
-      'Software architecture',
-      'Gamanza CRM system implementation',
-      'Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      '✓ Team management',
+      '✓ Decision making process',
+      '✓ Software architecture',
+      '✓ Gamanza Gamification system implementation',
+      '✓ Gamanza CRM system implementation',
+      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
     ],
   },
   {
@@ -704,8 +837,8 @@ const experiences = [
     to: '2021',
     position: 'Senior Back end developer',
     responsibilities: [
-      'Gamanza CRM system implementation',
-      'Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      '✓ Gamanza CRM system implementation',
+      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
     ],
   },
   {
@@ -714,8 +847,8 @@ const experiences = [
     to: '2021',
     position: 'Full stack developer ( freelance )',
     responsibilities: [
-      'Techoryze platform design and implementation https://techoryze.com',
-      'Typescript, NestJs, ReactJs, MongoDb',
+      '✓ Techoryze platform design and implementation https://techoryze.com',
+      '✓ Typescript, NestJs, ReactJs, MongoDb',
     ],
   },
   {
@@ -724,8 +857,8 @@ const experiences = [
     to: '2020',
     position: 'Senior .NET Back end developer ',
     responsibilities: [
-      'Develop software for PROCOMER Costa Rica.',
-      'C#, AppFabric, Microservices, SQL Server, XML, Angular, jQuery, Mvc .NET',
+      '✓ Develop software for PROCOMER Costa Rica.',
+      '✓ C#, AppFabric, Microservices, SQL Server, XML, Angular, jQuery, Mvc .NET',
     ],
   },
   {
@@ -734,8 +867,8 @@ const experiences = [
     to: '2018',
     position: 'Senior Software engineer / software architect',
     responsibilities: [
-      'Develop, software design, support, improvements and continuous integration of the on-line banking system.',
-      'Technologies: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
+      '✓ Develop, software design, support, improvements and continuous integration of the on-line banking system.',
+      '✓ Technologies: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
     ],
   },
   {
@@ -744,8 +877,8 @@ const experiences = [
     to: '2008',
     position: 'Software developer',
     responsibilities: [
-      'Development and maintenance of e-marketing web systems in Costa Rica and Mexico',
-      'Technologies: CMS, Sql Server, C#, ASP, HTML',
+      '✓ Develop and maintenance of e-marketing in Costa Rica and Mexico',
+      '✓ Technologies: CMS, Sql Server, C#, ASP, HTML',
     ],
   },
 ];
@@ -845,14 +978,23 @@ const socialLinks = [
     link: about.github,
   },
   {
-    title: 'facebook',
+    title: 'Upwork',
     icon: (
-      <IconContext.Provider value={{ size: '1.5rem' }}>
-        <RiFacebookCircleFill />
+      <IconContext.Provider value={{ size: '1.4rem' }}>
+        <SiUpwork />
       </IconContext.Provider>
     ),
-    link: 'https://www.facebook.com/ariassl',
+    link: about.upWork,
   },
+  // {
+  //   title: 'facebook',
+  //   icon: (
+  //     <IconContext.Provider value={{ size: '1.5rem' }}>
+  //       <RiFacebookCircleFill />
+  //     </IconContext.Provider>
+  //   ),
+  //   link: 'https://www.facebook.com/ariassl',
+  // },
   {
     title: 'twitter',
     icon: (

@@ -63,7 +63,7 @@ const Contact = () => {
                           method="POST"
                         >
                           <div className="p pb-3">
-                            <strong>Send Me A Message</strong>
+                            <strong>Send me a message</strong>
                           </div>
                           <div className="row mb-3">
                             <div className="col">
@@ -213,8 +213,8 @@ const Contact = () => {
             </Row>
           </StyledContainer>
           {Data.about.paymentMethods.crypto.show &&
-            Data.about.paymentMethods.crypto.accounts.map((i) => (
-              <Row justify="center" align="middle">
+            Data.about.paymentMethods.crypto.accounts.map((i, index) => (
+              <Row key={index} justify="center" align="middle">
                 <Col xl={4} lg={4} md={4} sm={4} xs={4}>
                   <b>{i.type}: </b>
                 </Col>

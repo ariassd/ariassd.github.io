@@ -36,7 +36,7 @@ const ColorPickerPopup = (props) => {
         <BlockPicker
           color={theme ? theme.hex : '#00bfa5'}
           triangle="hide"
-          onChange={(color, event) => {
+          onChange={(color) => {
             localStorage.setItem('portfolio-theme', JSON.stringify(color));
             setTheme(color);
             handleCancel();

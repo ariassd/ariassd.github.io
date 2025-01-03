@@ -20,6 +20,7 @@ const Profile = () => {
             <div className="container">
               <div className="content-center">
                 <div className="cc-profile-image">
+                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a href="#">
                     <Image
                       src={
@@ -27,7 +28,7 @@ const Profile = () => {
                       }
                       style={{
                         width: '100%',
-                        maxWidth: '200px',
+                        maxWidth: '180',
                         height: 'auto',
                       }}
                       preview={true}
