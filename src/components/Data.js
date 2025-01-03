@@ -16,13 +16,14 @@ import {
 import { ImMail4 } from 'react-icons/im';
 import { RiFacebookCircleFill, RiTwitterFill } from 'react-icons/ri';
 import {
-  SiCsharp,
+  // SiCsharp,
   SiCss3,
   SiJavascript,
   SiJquery,
   SiMongodb,
   SiMysql,
 } from 'react-icons/si';
+import { TbBrandCSharp } from 'react-icons/tb';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const skillIconSize = '4rem';
@@ -212,7 +213,8 @@ const skills = [
     title: '.net framework',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
-        <SiCsharp />
+        {/* <SiCsharp /> */}
+        <TbBrandCSharp />
       </IconContext.Provider>
     ),
   },

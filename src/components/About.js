@@ -1,9 +1,9 @@
-import { Avatar, Card, Col, Typography, Row } from 'antd';
-import { Comment } from '@ant-design/compatible';
+import { Card, Col, Row } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useBreakpoint } from '../hooks/breakpoint';
 import Data from './Data';
 import StyledContainer from './StyledContainer';
+import ProfileComment from './ProfileComment';
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -16,11 +16,7 @@ const About = () => {
   return (
     <React.Fragment>
       <div className="section" id="about">
-        <StyledContainer
-          childrenStyle={`.ant-comment-avatar {
-                        cursor: default
-                    }`}
-        >
+        <StyledContainer>
           <Card
             loading={loading}
             style={{ cursor: 'default' }}
@@ -29,30 +25,11 @@ const About = () => {
             className="z-shadow"
             data-aos="zoom-in"
             data-aos-offset="10"
+            styles={{ body: { padding: '20px' } }}
           >
             <Row gutter={24}>
               <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                <Comment
-                  author={Data.about.name}
-                  avatar={
-                    isMD && (
-                      <Avatar
-                        src={
-                          process.env.PUBLIC_URL + '/assets/img/luisarias.jpg'
-                        }
-                        alt={Data.about.name}
-                        style={{ cursor: 'default !important' }}
-                      />
-                    )
-                  }
-                  content={
-                    <Typography.Paragraph
-                      style={{ textAlign: 'justify', marginBottom: 0 }}
-                    >
-                      {Data.about.details}
-                    </Typography.Paragraph>
-                  }
-                />
+                <ProfileComment Data={Data} isMD={isMD} />
               </Col>
             </Row>
           </Card>

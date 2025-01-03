@@ -5,7 +5,7 @@ import {
   FaEnvelope,
   FaFileAlt,
   FaPaperPlane,
-  FaUserCircle
+  FaUserCircle,
 } from 'react-icons/fa';
 import { ImFilePdf } from 'react-icons/im';
 import ReactiveButton from 'reactive-button';
@@ -34,7 +34,7 @@ const Contact = () => {
                 <Card
                   style={{ cursor: 'default' }}
                   hoverable
-                  bordered={false}
+                  bordered={true}
                   className="z-shadow"
                   data-aos="zoom-in"
                   data-aos-offset="10"

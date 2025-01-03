@@ -18,6 +18,47 @@ const Education = () => {
     setLoading(false);
   }, []);
 
+  const timelineItems = education.map((item, index) => ({
+    children: (
+      <Row>
+        <Col span={24}>
+          <Typography.Text level={5}>{item.institution}</Typography.Text>
+        </Col>
+        <Col span={24}>
+          <Typography.Text type="secondary">
+            {item.from} - {item.to}
+          </Typography.Text>
+        </Col>
+        <Col span={24}>
+          <Typography.Text strong>{item.degree}</Typography.Text>
+        </Col>
+        <Col span={24}>
+          <List
+            dir={!isMD || index % 2 === 0 ? 'lrl' : 'rtl'}
+            size="small"
+            split={false}
+            dataSource={item.info}
+            renderItem={(subItem) => {
+              if (subItem.title && subItem.value) {
+                return (
+                  <StyledListItem>
+                    <Typography.Text style={{ fontSize: 12, color: 'gray' }}>
+                      <strong>{subItem.title}: </strong>
+                      {subItem.value}
+                    </Typography.Text>
+                  </StyledListItem>
+                );
+              }
+            }}
+          />
+        </Col>
+      </Row>
+    ),
+    key: index,
+    'data-aos': 'zoom-in',
+    'data-aos-offset': 10,
+  }));
+
   return (
     <React.Fragment>
       <div className="section" id="education">
@@ -36,59 +77,13 @@ const Education = () => {
                 loading={loading}
                 style={{ cursor: 'default' }}
                 hoverable
-                bordered={false}
+                bordered={true}
                 className="z-shadow"
               >
-                <Timeline mode={!isMD ? 'left' : 'alternate'}>
-                  {education.map((item, index) => (
-                    <Timeline.Item
-                      key={index}
-                      data-aos="zoom-in"
-                      data-aos-offset="10"
-                    >
-                      <Row>
-                        <Col span={24}>
-                          <Typography.Text level={5}>
-                            {item.institution}
-                          </Typography.Text>
-                        </Col>
-                        <Col span={24}>
-                          <Typography.Text type="secondary">
-                            {item.from} - {item.to}
-                          </Typography.Text>
-                        </Col>
-                        <Col span={24}>
-                          <List
-                            dir={!isMD || index % 2 === 0 ? 'lrl' : 'rtl'}
-                            size="small"
-                            header={
-                              <Typography.Text strong>
-                                {item.degree}
-                              </Typography.Text>
-                            }
-                            split={false}
-                            dataSource={item.info}
-                            renderItem={(item) => {
-                              if (item.title && item.value) {
-                                return (
-                                  <StyledListItem>
-                                    <Typography.Text
-                                      style={{ fontSize: 12, color: 'gray' }}
-                                    >
-                                      <strong>{item.title}: </strong>
-                                      {item.value}
-                                    </Typography.Text>
-                                  </StyledListItem>
-                                );
-                              }
-                            }}
-                          />
-                        </Col>
-                      </Row>
-                    </Timeline.Item>
-                  ))}
-                  <Timeline.Item dot={<i style={{ display: 'none' }} />} />
-                </Timeline>
+                <Timeline
+                  mode={!isMD ? 'left' : 'alternate'}
+                  items={timelineItems}
+                />
               </Card>
             </Col>
           </Row>

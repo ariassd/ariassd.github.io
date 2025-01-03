@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactiveButton from 'reactive-button';
 import Data from './Data';
-import Typed from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import { Image } from 'antd';
 
 const Profile = () => {
@@ -20,13 +20,17 @@ const Profile = () => {
             <div className="container">
               <div className="content-center">
                 <div className="cc-profile-image">
-                  {/* eslint-disable-next-line */}
                   <a href="#">
                     <Image
                       src={
                         process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'
                       }
-                      preview={false}
+                      style={{
+                        width: '100%',
+                        maxWidth: '200px',
+                        height: 'auto',
+                      }}
+                      preview={true}
                       placeholder={
                         <Image
                           preview={false}
@@ -41,7 +45,7 @@ const Profile = () => {
                 </div>
                 <div className="h2 title">{Data.about.name}</div>
                 <p className="category text-white">
-                  <Typed
+                  <ReactTyped
                     className="font-weight-light"
                     strings={
                       Data.about.taglines && Data.about.taglines.length

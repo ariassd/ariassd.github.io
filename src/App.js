@@ -12,9 +12,18 @@ import { ThemeContext } from './contexts/ThemeContext';
 import 'antd/dist/reset.css';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
 import Data from './components/Data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [theme] = useContext(ThemeContext);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   useEffect(() => {
     if (theme) {

@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="footer">
         <div className="container text-center">
           {Data.socialLinks.map((socialLink, index) => (
-            <Tooltip title={socialLink.title}>
+            <Tooltip title={socialLink.title} key={index}>
               <a
                 key={index}
                 className="btn btn-link text-primary-light"
@@ -23,9 +23,10 @@ const Footer = () => {
           ))}
 
           {Data.about.paymentMethods.donate.show &&
-            Data.about.paymentMethods.donate.accounts.map((i) => (
-              <Tooltip title={i.title}>
+            Data.about.paymentMethods.donate.accounts.map((i, ix) => (
+              <Tooltip title={i.title} key={ix}>
                 <a
+                  key={ix}
                   className="btn btn-link text-primary-light"
                   target="_blank"
                   href={i.account}
