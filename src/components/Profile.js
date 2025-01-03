@@ -28,7 +28,7 @@ const Profile = () => {
                       }
                       style={{
                         width: '100%',
-                        maxWidth: '180',
+                        maxWidth: '180px',
                         height: 'auto',
                       }}
                       preview={true}
