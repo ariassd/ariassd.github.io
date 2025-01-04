@@ -1,11 +1,10 @@
 import { Card, Col, Row } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useBreakpoint } from '../hooks/breakpoint';
-import Data from './Data';
 import StyledContainer from './StyledContainer';
 import ProfileComment from './ProfileComment';
 
-const About = () => {
+const About = ({ Data }) => {
   const [loading, setLoading] = useState(true);
   const isMD = useBreakpoint();
 

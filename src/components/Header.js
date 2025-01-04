@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BiColorFill } from 'react-icons/bi';
 import ColorPickerPopup from './ColorPickerPopup';
-import Data from './Data';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
-const Header = () => {
+const Header = ({ Data, OnLanguageChange }) => {
   const [colorPickerVisible, setColorPickerVisible] = useState(false);
+  const [language, setLanguage] = useLocalStorage('language', 'EN');
+
+  const changeLanguage = () => {
+    const newLanguage = language === 'EN' ? 'ES' : 'EN';
+    setLanguage(newLanguage);
+  };
+
+  useEffect(() => {
+    OnLanguageChange(language);
+  }, [language]);
 
   return (
     <React.Fragment>
@@ -54,6 +64,15 @@ const Header = () => {
                 id="navigation"
               >
                 <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a
+                      className="nav-link smooth-scroll"
+                      href="javascript:void(0)"
+                      onClick={() => changeLanguage()}
+                    >
+                      {language}
+                    </a>
+                  </li>
                   <li className="nav-item">
                     <a className="nav-link smooth-scroll" href="#about">
                       About

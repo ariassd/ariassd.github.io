@@ -9,10 +9,9 @@ import {
 } from 'react-icons/fa';
 import { ImFilePdf } from 'react-icons/im';
 import ReactiveButton from 'reactive-button';
-import Data from './Data';
 import StyledContainer from './StyledContainer';
 
-const Contact = () => {
+const Contact = ({ Data }) => {
   return (
     <React.Fragment>
       <div className="section" id="contact">

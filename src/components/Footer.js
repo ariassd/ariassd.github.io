@@ -1,9 +1,7 @@
 import { Tooltip } from 'antd';
 import React from 'react';
 
-import Data from './Data';
-
-const Footer = () => {
+const Footer = ({ Data }) => {
   return (
     <React.Fragment>
       <footer className="footer">

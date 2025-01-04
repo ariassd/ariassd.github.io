@@ -1,9 +1,8 @@
 import { Card, Col, Row, Space, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
-import Data from './Data';
 import StyledContainer from './StyledContainer';
 
-const Skill = () => {
+const Skill = ({ Data }) => {
   const [loading, setLoading] = useState(true);
   const skills = Data.skills;
 

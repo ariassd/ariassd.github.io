@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Data from './Data';
 import ReactiveButton from 'reactive-button';
 import { BsArrowBarRight } from 'react-icons/bs';
 import StyledContainer from './StyledContainer';
@@ -27,7 +26,7 @@ const LazyLoadPlaceHolderWrapper = styled.div`
   display: inline-flex;
 `;
 
-const Project = () => {
+const Project = ({ Data }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');

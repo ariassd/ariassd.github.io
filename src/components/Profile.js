@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactiveButton from 'reactive-button';
-import Data from './Data';
+
 import { ReactTyped } from 'react-typed';
 import { Image } from 'antd';
 
-const Profile = () => {
+const Profile = ({ Data }) => {
   return (
     <React.Fragment>
       <div className="profile-page">

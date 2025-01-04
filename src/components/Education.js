@@ -2,14 +2,13 @@ import { Card, Col, List, Row, Timeline, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useBreakpoint } from '../hooks/breakpoint';
-import Data from './Data';
 import StyledContainer from './StyledContainer';
 
 const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
 `;
 
-const Education = () => {
+const Education = ({ Data }) => {
   const [loading, setLoading] = useState(true);
   const education = Data.education;
   const isMD = useBreakpoint();

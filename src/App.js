@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import About from './components/About';
 import Contact from './components/Contact';
 import Education from './components/Education';
@@ -11,12 +11,22 @@ import Skill from './components/Skill';
 import { ThemeContext } from './contexts/ThemeContext';
 import 'antd/dist/reset.css';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
-import Data from './components/Data';
+import { Languages } from './components/Data';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
   const [theme] = useContext(ThemeContext);
+  const [data, setData] = useState(Languages.EN);
+
+  const onLanguageChange = (language) => {
+    console.log('language', language);
+    if (language === 'ES') {
+      setData(Languages.ES);
+    } else {
+      setData(Languages.EN);
+    }
+  };
 
   useEffect(() => {
     AOS.init({
@@ -31,13 +41,13 @@ function App() {
       changeTheme(theme);
     } else {
       // changeAntdTheme('#00bfa5');
-      console.log(Data.defaultThemeColor);
+      // console.log(Data.defaultThemeColor);
       localStorage.setItem(
         'portfolio-theme',
-        JSON.stringify(Data.defaultThemeColor),
+        JSON.stringify(data.defaultThemeColor),
       );
       changeAntdTheme('#cc0000');
-      changeTheme(Data.defaultThemeColor);
+      changeTheme(data.defaultThemeColor);
     }
   }, [theme]);
 
@@ -59,17 +69,17 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header Data={data} OnLanguageChange={onLanguageChange} />
       <div className="page-content">
-        <Profile />
-        <About />
-        <Skill />
-        <Experience />
-        <Education />
-        <Project />
-        <Contact />
+        <Profile Data={data} />
+        <About Data={data} />
+        <Skill Data={data} />
+        <Experience Data={data} />
+        <Education Data={data} />
+        <Project Data={data} />
+        <Contact Data={data} />
       </div>
-      <Footer />
+      <Footer Data={data} />
     </React.Fragment>
   );
 }
