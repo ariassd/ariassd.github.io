@@ -2,7 +2,7 @@ import { Card, Col, Row, Space, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import StyledContainer from './StyledContainer';
 
-const Skill = ({ Data }) => {
+const Skill = ({ Data, i18 }) => {
   const [loading, setLoading] = useState(true);
   const skills = Data.skills;
 
@@ -20,7 +20,7 @@ const Skill = ({ Data }) => {
                 level={3}
                 style={{ textAlign: 'center', marginBottom: '2rem' }}
               >
-                Professional Skills
+                {i18.TIT_PROF_SKILLS}
               </Typography.Title>
             </Col>
             <Col span={24}>
@@ -75,7 +75,7 @@ const Skill = ({ Data }) => {
                 level={3}
                 style={{ textAlign: 'center', marginBottom: '2rem' }}
               >
-                Soft Skills
+                {i18.TIT_SOFT_SKILLS}
               </Typography.Title>
             </Col>
             <Col span={24}>

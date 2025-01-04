@@ -8,7 +8,7 @@ const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
 `;
 
-const Education = ({ Data }) => {
+const Education = ({ Data, i18 }) => {
   const [loading, setLoading] = useState(true);
   const education = Data.education;
   const isMD = useBreakpoint();
@@ -68,7 +68,7 @@ const Education = ({ Data }) => {
                 level={3}
                 style={{ textAlign: 'center', marginBottom: '2rem' }}
               >
-                Education
+                {i18.TIT_EDUCATION}
               </Typography.Title>
             </Col>
             <Col span={24}>
@@ -78,6 +78,8 @@ const Education = ({ Data }) => {
                 hoverable
                 bordered={true}
                 className="z-shadow"
+                data-aos="zoom-in"
+                data-aos-offset="10"
               >
                 <Timeline
                   mode={!isMD ? 'left' : 'alternate'}

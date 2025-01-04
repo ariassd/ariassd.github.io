@@ -125,16 +125,16 @@ const about = {
   ),
   phone: '8735-3483',
   email: 'ariassd@gmail.com',
-  address: 'El Roble, Heredia, CR',
+  address: 'Santa Bárbara, Heredia, CR',
   university: 'Universidad Nacional de Costa Rica',
   github: 'https://github.com/ariassd',
   upWork: 'https://www.upwork.com/freelancers/~01eb5047d927060e0f',
   googleEmbeddedMapUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.3263166936113!2d-84.15768331774679!3d10.072325737623318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA0JzIwLjQiTiA4NMKwMDknMjIuMSJX!5e0!3m2!1sen!2scr!4v1620427865488!5m2!1sen!2scr',
-  hideCv: true,
+  hideCv: false,
   hidePhone: true,
   hideEmail: true,
-  hideMap: true,
+  hideMap: false,
   cv: '',
   formspree: 'https://formspree.io/f/xzbydyqb',
   taglines: [
@@ -205,7 +205,7 @@ const skills = [
   },
   {
     type: 'soft',
-    title: 'Problem solving',
+    title: 'Resolución de problemas',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#FFD700' }}>
         <GiArcheryTarget />
@@ -223,7 +223,7 @@ const skills = [
   },
   {
     type: 'soft',
-    title: 'Transparency',
+    title: 'Transparencia',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#00CED1' }}>
         <GiOpenBook />
@@ -232,7 +232,7 @@ const skills = [
   },
   {
     type: 'soft',
-    title: 'Time management',
+    title: 'Control del tiempo',
     icon: (
       <IconContext.Provider value={{ size: skillIconSize, color: '#FF4500' }}>
         <TbClockDollar />
@@ -423,7 +423,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         Esta es un utilitario instalado a través de npm que te permite gestionar
@@ -460,7 +460,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Web site'],
+    categories: ['Página web'],
     description: (
       <React.Fragment>
         <p>
@@ -497,11 +497,11 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
-        Convert from simple CSV file to JSON. With this powerful tool you will
-        be able to process CSV files and make calculations in seconds
+        Convierte de un archivo CSV simple a JSON. Con esta poderosa herramienta
+        podrás procesar archivos CSV y hacer cálculos en segundos.
       </React.Fragment>
     ),
     links: [
@@ -529,7 +529,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         Este utilitario te ayudará a enviar solicitudes a socket.io utilizando
@@ -563,7 +563,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         Paquete que permite obtener la diferencia entre dos objetos JSON
@@ -590,7 +590,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         La manera más fácil de generar un documento markdown a partir de la
@@ -622,7 +622,7 @@ const projects = [
         color: '#31B2FB',
       },
     ],
-    categories: ['Other'],
+    categories: ['Otros'],
     description: (
       <React.Fragment>
         Esta fuente convierte caracteres alfabéticos en símbolos. Fácil de usar
@@ -651,7 +651,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         Snack Query Builder NPM es una herramienta útil para construir consultas
@@ -684,7 +684,7 @@ const projects = [
         color: '#5C9553',
       },
     ],
-    categories: ['Package'],
+    categories: ['Librería'],
     description: (
       <React.Fragment>
         Este complemento te permite interceptar fechas y formatearlas de
@@ -806,9 +806,9 @@ const projects = [
     categories: ['VS Code'],
     description: (
       <React.Fragment>
-        This extension allow to open multiple terminals stacked side by side and
-        run a different command on each one. Perfect to work in a workspace with
-        multiple projects.
+        Esta extensión permite abrir múltiples terminales apiladas lado a lado y
+        ejecutar un comando diferente en cada una. Perfecto para trabajar en un
+        espacio de trabajo con múltiples proyectos.
       </React.Fragment>
     ),
     links: [

@@ -3,7 +3,7 @@ import { BiColorFill } from 'react-icons/bi';
 import ColorPickerPopup from './ColorPickerPopup';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
-const Header = ({ Data, OnLanguageChange }) => {
+const Header = ({ Data, i18, OnLanguageChange }) => {
   const [colorPickerVisible, setColorPickerVisible] = useState(false);
   const [language, setLanguage] = useLocalStorage('language', 'EN');
 
@@ -65,42 +65,42 @@ const Header = ({ Data, OnLanguageChange }) => {
               >
                 <ul className="navbar-nav">
                   <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#about">
+                      {i18.LNK_HEADER_ABOUT}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#skill">
+                      {i18.LNK_HEADER_SKILLS}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#experience">
+                      {i18.LNK_HEADER_EXPERIENCE}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#education">
+                      {i18.LNK_HEADER_EDUCATION}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#projects">
+                      {i18.LNK_HEADER_PROJECTS}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link smooth-scroll" href="#contact">
+                      {i18.LNK_HEADER_CONTACT}
+                    </a>
+                  </li>
+                  <li className="nav-item">
                     <a
                       className="nav-link smooth-scroll"
                       href="javascript:void(0)"
                       onClick={() => changeLanguage()}
                     >
                       {language}
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#about">
-                      About
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#skill">
-                      Skills
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#experience">
-                      Experience
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#education">
-                      Education
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#projects">
-                      Projects
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link smooth-scroll" href="#contact">
-                      Contact
                     </a>
                   </li>
                   {Data.about.paymentMethods.donate.show &&

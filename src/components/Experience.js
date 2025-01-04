@@ -8,7 +8,7 @@ const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
 `;
 
-const Experience = ({ Data }) => {
+const Experience = ({ Data, i18 }) => {
   const [loading, setLoading] = useState(true);
   const isMD = useBreakpoint();
 
@@ -61,7 +61,7 @@ const Experience = ({ Data }) => {
           <Row>
             <Col span={24}>
               <Typography.Title level={3} style={{ textAlign: 'center' }}>
-                Work Experience
+                {i18.TIT_EXPERIENCE}
               </Typography.Title>
             </Col>
             <Col span={24}>

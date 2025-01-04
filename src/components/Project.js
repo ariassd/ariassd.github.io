@@ -26,7 +26,7 @@ const LazyLoadPlaceHolderWrapper = styled.div`
   display: inline-flex;
 `;
 
-const Project = ({ Data }) => {
+const Project = ({ Data, i18 }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -71,7 +71,7 @@ const Project = ({ Data }) => {
                 level={3}
                 style={{ textAlign: 'center', marginBottom: '2rem' }}
               >
-                Projects
+                {i18.TIT_PORTFOLIO}
               </Typography.Title>
             </Col>
             <Col span={24}>
@@ -89,7 +89,7 @@ const Project = ({ Data }) => {
                         buttonStyle="solid"
                         value={selectedCategory}
                       >
-                        <Radio.Button value="All">All</Radio.Button>
+                        <Radio.Button value="All">{i18.LBL_ALL}</Radio.Button>
                         {categories.map((category, index) => (
                           <Radio.Button
                             key={index}
@@ -187,7 +187,7 @@ const Project = ({ Data }) => {
                     <ReactiveButton
                       idleText={
                         <React.Fragment>
-                          Load More <BsArrowBarRight />
+                          {i18.BTN_LOAD_MORE} <BsArrowBarRight />
                         </React.Fragment>
                       }
                       onClick={loadMore}

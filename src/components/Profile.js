@@ -4,7 +4,7 @@ import ReactiveButton from 'reactive-button';
 import { ReactTyped } from 'react-typed';
 import { Image } from 'antd';
 
-const Profile = ({ Data }) => {
+const Profile = ({ Data, i18 }) => {
   return (
     <React.Fragment>
       <div className="profile-page">
@@ -68,10 +68,12 @@ const Profile = ({ Data }) => {
                       data-aos-anchor="data-aos-anchor"
                       rel="noopener noreferrer"
                     >
+                      {/* PRINT */}
                       <ReactiveButton
                         style={{ fontSize: '0.8571em' }}
-                        idleText="Download CV"
+                        idleText={i18.LBL_CV}
                         className="mt-4"
+                        // onClick={() => window.print()}
                       />
                     </a>
                   </div>

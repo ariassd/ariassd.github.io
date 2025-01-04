@@ -12,19 +12,22 @@ import { ThemeContext } from './contexts/ThemeContext';
 import 'antd/dist/reset.css';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
 import { Languages } from './components/Data';
+import { I18 } from './i18/i18';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
   const [theme] = useContext(ThemeContext);
   const [data, setData] = useState(Languages.EN);
+  const [i18, setI18] = useState(I18.EN);
 
   const onLanguageChange = (language) => {
-    console.log('language', language);
     if (language === 'ES') {
       setData(Languages.ES);
+      setI18(I18.ES);
     } else {
       setData(Languages.EN);
+      setI18(I18.EN);
     }
   };
 
@@ -69,17 +72,17 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header Data={data} OnLanguageChange={onLanguageChange} />
+      <Header Data={data} i18={i18} OnLanguageChange={onLanguageChange} />
       <div className="page-content">
-        <Profile Data={data} />
-        <About Data={data} />
-        <Skill Data={data} />
-        <Experience Data={data} />
-        <Education Data={data} />
-        <Project Data={data} />
-        <Contact Data={data} />
+        <Profile Data={data} i18={i18} />
+        <About Data={data} i18={i18} />
+        <Skill Data={data} i18={i18} />
+        <Experience Data={data} i18={i18} />
+        <Education Data={data} i18={i18} />
+        <Project Data={data} i18={i18} />
+        <Contact Data={data} i18={i18} />
       </div>
-      <Footer Data={data} />
+      <Footer Data={data} i18={i18} />
     </React.Fragment>
   );
 }

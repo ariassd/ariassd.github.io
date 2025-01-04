@@ -11,7 +11,7 @@ import { ImFilePdf } from 'react-icons/im';
 import ReactiveButton from 'reactive-button';
 import StyledContainer from './StyledContainer';
 
-const Contact = ({ Data }) => {
+const Contact = ({ Data, i18 }) => {
   return (
     <React.Fragment>
       <div className="section" id="contact">
@@ -20,13 +20,13 @@ const Contact = ({ Data }) => {
           style={{ backgroundImage: "url('assets/img/footer-image.png')" }}
         >
           <StyledContainer>
-            <Row gutter={24}>
+            <Row>
               <Col span={24}>
                 <Typography.Title
                   level={3}
                   style={{ textAlign: 'center', marginBottom: '2rem' }}
                 >
-                  Contact Me
+                  {i18.TIT_CONTACT}
                 </Typography.Title>
               </Col>
               <Col span={24}>
@@ -38,23 +38,8 @@ const Contact = ({ Data }) => {
                   data-aos="zoom-in"
                   data-aos-offset="10"
                 >
-                  <Row justify="center" align="middle">
-                    {!Data.about.hideMap && (
-                      <Col xl={10} lg={10} md={10} sm={10} xs={10}>
-                        <iframe
-                          src={Data.about.googleEmbeddedMapUrl}
-                          width="100%"
-                          height="350"
-                          style={{
-                            border: 0,
-                          }}
-                          allowFullScreen
-                          loading="lazy"
-                          title="map"
-                        ></iframe>
-                      </Col>
-                    )}
-                    <Col xl={10} lg={10} md={10} sm={10} xs={10}>
+                  <Row>
+                    <Col xl={16} lg={16} md={16} sm={24} xs={24}>
                       <div className="card-body">
                         <form
                           action={Data.about.formspree}
@@ -62,7 +47,7 @@ const Contact = ({ Data }) => {
                           method="POST"
                         >
                           <div className="p pb-3">
-                            <strong>Send me a message</strong>
+                            <strong>{i18.LBL_SEND_A_MESSAGE}</strong>
                           </div>
                           <div className="row mb-3">
                             <div className="col">
@@ -74,7 +59,7 @@ const Contact = ({ Data }) => {
                                   className="form-control"
                                   type="text"
                                   name="name"
-                                  placeholder="Name"
+                                  placeholder={i18.LBL_NAME}
                                   required="required"
                                 />
                               </div>
@@ -90,7 +75,7 @@ const Contact = ({ Data }) => {
                                   className="form-control"
                                   type="text"
                                   name="Subject"
-                                  placeholder="Subject"
+                                  placeholder={i18.LBL_SUBJECT}
                                   required="required"
                                 />
                               </div>
@@ -106,7 +91,7 @@ const Contact = ({ Data }) => {
                                   className="form-control"
                                   type="email"
                                   name="_replyto"
-                                  placeholder="E-mail"
+                                  placeholder={i18.LBL_EMAIL}
                                   required="required"
                                 />
                               </div>
@@ -118,7 +103,7 @@ const Contact = ({ Data }) => {
                                 <textarea
                                   className="form-control"
                                   name="message"
-                                  placeholder="Your Message"
+                                  placeholder={i18.LBL_YOUR_MESSAGE}
                                   required="required"
                                 ></textarea>
                               </div>
@@ -130,7 +115,7 @@ const Contact = ({ Data }) => {
                                 type="submit"
                                 idleText={
                                   <React.Fragment>
-                                    <FaPaperPlane /> Send
+                                    <FaPaperPlane /> {i18.BTN_SEND}
                                   </React.Fragment>
                                 }
                                 style={{ fontSize: '13px' }}
@@ -142,22 +127,22 @@ const Contact = ({ Data }) => {
                     </Col>
 
                     <Col
-                      xl={4}
-                      lg={4}
-                      md={4}
-                      sm={4}
-                      xs={4}
+                      xl={8}
+                      lg={8}
+                      md={8}
+                      sm={24}
+                      xs={24}
                       style={{ textAlign: 'center' }}
                     >
                       <div className="card-body">
                         <p className="mb-0">
-                          <strong>Address</strong>
+                          <strong>{i18.LBL_ADDRESS}</strong>
                         </p>
                         <p className="pb-2 text-muted">{Data.about.address}</p>
                         {!Data.about.hidePhone && (
                           <React.Fragment>
                             <p className="mb-0">
-                              <strong>Phone</strong>
+                              <strong>{i18.LBL_PHONE}</strong>
                             </p>
                             <p className="pb-2 text-muted">
                               {Data.about.phone}
@@ -167,7 +152,7 @@ const Contact = ({ Data }) => {
                         {!Data.about.hideEmail && (
                           <React.Fragment>
                             <p className="mb-0">
-                              <strong>Email</strong>
+                              <strong>{i18.LBL_PHONE}</strong>
                             </p>
 
                             <p>
@@ -186,7 +171,7 @@ const Contact = ({ Data }) => {
                         {!Data.about.hideCv && (
                           <React.Fragment>
                             <p className="mb-0">
-                              <strong>CV</strong>
+                              <strong>{i18.LBL_CV}</strong>
                             </p>
                             <div>
                               <a
@@ -207,6 +192,23 @@ const Contact = ({ Data }) => {
                       </div>
                     </Col>
                   </Row>
+                  {!Data.about.hideMap && (
+                    <Row>
+                      <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                        <iframe
+                          src={Data.about.googleEmbeddedMapUrl}
+                          width="100%"
+                          height="300"
+                          style={{
+                            border: 0,
+                          }}
+                          allowFullScreen
+                          loading="lazy"
+                          title="map"
+                        ></iframe>
+                      </Col>
+                    </Row>
+                  )}
                 </Card>
               </Col>
             </Row>
