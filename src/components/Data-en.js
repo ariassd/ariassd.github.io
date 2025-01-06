@@ -980,6 +980,59 @@ const socialLinks = [
   },
 ];
 
+const references = [
+  {
+    name: 'Leonardo Monge',
+    contact: '+506 8706-8185',
+    position: 'Engineer Manager @ Gamanza Costa Rica',
+    from: 2022,
+    to: 'current',
+    company: 'Gamanza Engage',
+    relationShip:
+      'I worked side by side with Leonardo making decisions, planning and supporting the gamification platform for Gamanza',
+  },
+  {
+    name: 'Evans García Sánchez',
+    contact: '+506 8740-0111',
+    position: 'Project Manager @ Creative Drive',
+    from: 2020,
+    to: 2020,
+    company: 'Creative Drive',
+    relationShip:
+      'I Worked with Evans in Creative Drive and I reported the status of issues, changes and advance of the system',
+  },
+  {
+    name: 'Orlando Solano',
+    contact: '+506 8730-2461',
+    position: 'Project Manager @ Grupo LAFISE San José CR',
+    from: 2008,
+    to: 2017,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'Firstly I worked side by side with Orlando in the department of Online Banking, later Orlando become a manager',
+  },
+  {
+    name: 'Lisette Ureña Porras',
+    contact: '+506 8386-0430',
+    position: 'Teacher @ UNED',
+    from: 2008,
+    to: 2015,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'Lisette was a coworker on different department in BCT, I worked side by side with her integrating the online banking and core systems',
+  },
+  {
+    name: 'Marco Campos Quesada',
+    contact: '+506 8371-7988',
+    position: 'Project Manager, Scrum master @ IBM',
+    from: 2008,
+    to: 2010,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'Marco Campos was the manager of the Online Banking department, I worked with Marco maintaining such system',
+  },
+];
+
 const DataEn = {
   defaultThemeColor,
   about,
@@ -989,6 +1042,7 @@ const DataEn = {
   education,
   socialLinks,
   getExperienceDuration,
+  references,
 };
 
 export default DataEn;

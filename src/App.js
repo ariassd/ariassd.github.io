@@ -49,10 +49,7 @@ const AppContent = () => {
     }
   };
 
-  console.log('HERE');
-
   useEffect(() => {
-    console.log('ASDSADSA AS', language);
     if (language === 'ES') {
       setData(Languages.ES);
       setI18(I18.ES);

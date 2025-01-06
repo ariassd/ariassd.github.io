@@ -989,6 +989,59 @@ const socialLinks = [
   },
 ];
 
+const references = [
+  {
+    name: 'Leonardo Monge',
+    contact: '+506 8706-8185',
+    position: 'Engineer Manager @ Gamanza Costa Rica',
+    from: 2022,
+    to: 'current',
+    company: 'Gamanza Engage',
+    relationShip:
+      'Trabajé codo a codo con Leonardo tomando decisiones, planificando y apoyando la plataforma de gamificación para Gamanza.',
+  },
+  {
+    name: 'Evans García Sánchez',
+    contact: '+506 8740-0111',
+    position: 'Project Manager @ Creative Drive',
+    from: 2020,
+    to: 2020,
+    company: 'Creative Drive',
+    relationShip:
+      'Trabajé con Evans en Creative Drive y reporté el estado de los problemas, cambios y avances del sistema.',
+  },
+  {
+    name: 'Orlando Solano',
+    contact: '+506 8730-2461',
+    position: 'Project Manager @ Grupo LAFISE San José CR',
+    from: 2008,
+    to: 2017,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'En primer lugar, trabajé junto con Orlando en el Departamento de Banca en línea, más tarde Orlando se convirtió en gerente',
+  },
+  {
+    name: 'Lisette Ureña Porras',
+    contact: '+506 8386-0430',
+    position: 'Teacher @ UNED',
+    from: 2008,
+    to: 2015,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'Lisette era compañera de trabajo en un departamento diferente en BCT, trabajé codo con codo con ella integrando los sistemas bancarios y centrales en línea',
+  },
+  {
+    name: 'Marco Campos Quesada',
+    contact: '+506 8371-7988',
+    position: 'Project Manager, Scrum master @ IBM',
+    from: 2008,
+    to: 2010,
+    company: 'Banco BCT S.A',
+    relationShip:
+      'Marco Campos fue el gerente del departamento de banca en línea, trabajé con Marco manteniendo dicho sistema',
+  },
+];
+
 const DataEs = {
   defaultThemeColor,
   about,
@@ -998,6 +1051,7 @@ const DataEs = {
   education,
   socialLinks,
   getExperienceDuration,
+  references,
 };
 
 export default DataEs;

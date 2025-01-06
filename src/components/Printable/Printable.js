@@ -9,6 +9,8 @@ import Experience from './Experience';
 import About from './About';
 import Project from './Project';
 import Skills from './Skills';
+import References from './References';
+import Footer from './Footer';
 import Education from './Education';
 import { FaLanguage } from 'react-icons/fa';
 import { MdMarkEmailUnread } from 'react-icons/md';
@@ -107,6 +109,8 @@ const Printable = ({ Data, i18 }) => {
           <Col span={24} style={cssPageColumn}>
             <Skills Data={Data} i18={i18} type="soft" />
           </Col>
+        </Row>
+        <Row>
           <Col span={24} style={cssPageColumn}>
             <Skills Data={Data} i18={i18} type="hard" />
           </Col>
@@ -117,6 +121,17 @@ const Printable = ({ Data, i18 }) => {
         <Row>
           <Col span={24} style={cssPageColumn}>
             <Project Data={Data} i18={i18} />
+          </Col>
+        </Row>
+
+        {/* Page number 4 */}
+        <div style={{ breakAfter: 'page' }}></div>
+        <Row>
+          <Col span={12} style={cssPageColumn}>
+            <References Data={Data} i18={i18} type="soft" />
+          </Col>
+          <Col span={12} style={cssPageColumn}>
+            <Footer Data={Data} i18={i18} type="soft" />
           </Col>
         </Row>
       </div>

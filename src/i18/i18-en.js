@@ -14,6 +14,8 @@ export const I18_EN = {
   TIT_EDUCATION: 'Education',
   TIT_PORTFOLIO: 'Portfolio',
   TIT_CONTACT: 'Contact me',
+  TIT_REFERENCES: 'References',
+  TIT_FOOTER: 'Quote',
 
   LBL_ALL: 'All',
   LBL_SEND_A_MESSAGE: 'Send me a message',
