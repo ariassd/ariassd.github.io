@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactiveButton from 'reactive-button';
+import { useNavigate } from 'react-router-dom';
 
 import { ReactTyped } from 'react-typed';
 import { Image } from 'antd';
 
 const Profile = ({ Data, i18 }) => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <div className="profile-page">
@@ -61,21 +63,15 @@ const Profile = ({ Data, i18 }) => {
                 </p>
                 {!Data.about.hideCv && (
                   <div>
-                    <a
-                      href={Data.about.cv}
-                      target="_blank"
-                      data-aos="zoom-in"
-                      data-aos-anchor="data-aos-anchor"
-                      rel="noopener noreferrer"
-                    >
-                      {/* PRINT */}
-                      <ReactiveButton
-                        style={{ fontSize: '0.8571em' }}
-                        idleText={i18.LBL_CV}
-                        className="mt-4"
-                        // onClick={() => window.print()}
-                      />
-                    </a>
+                    {/* PRINT */}
+                    <ReactiveButton
+                      style={{ fontSize: '0.8571em' }}
+                      idleText={i18.LBL_CV}
+                      className="mt-4"
+                      onClick={() => {
+                        navigate('/print?f=pdf');
+                      }}
+                    />
                   </div>
                 )}
               </div>

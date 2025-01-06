@@ -6,6 +6,8 @@ export const I18_ES = {
   LNK_HEADER_PROJECTS: 'Proyectos',
   LNK_HEADER_CONTACT: 'Contacto',
 
+  TIT_PAGE_TITLE: 'Curriculum vitae',
+  TIT_ABOUT: 'Acerca de mi',
   TIT_PROF_SKILLS: 'Habilidades profesionales',
   TIT_SOFT_SKILLS: 'Habilidades blandas',
   TIT_EXPERIENCE: 'Experiencia laboral',
@@ -22,6 +24,7 @@ export const I18_ES = {
   LBL_ADDRESS: 'Ubicación',
   LBL_PHONE: 'Teléfono',
   LBL_CV: 'Imprimir CV',
+  LBL_LANGUAGES: 'Idiomas',
 
   BTN_LOAD_MORE: 'Cargar más',
   BTN_SEND: 'Enviar',

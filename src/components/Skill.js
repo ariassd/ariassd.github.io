@@ -1,8 +1,10 @@
 import { Card, Col, Row, Space, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import StyledContainer from './StyledContainer';
+import { IconContext } from 'react-icons';
 
 const Skill = ({ Data, i18 }) => {
+  const skillIconSize = '4rem';
   const [loading, setLoading] = useState(true);
   const skills = Data.skills;
 
@@ -49,10 +51,19 @@ const Skill = ({ Data, i18 }) => {
                         bordered={true}
                       >
                         <Space direction="vertical">
-                          <div>{skill.icon}</div>
+                          <div>
+                            <IconContext.Provider
+                              value={{
+                                size: skillIconSize,
+                                color: skill.iconColor,
+                              }}
+                            >
+                              {skill.icon}
+                            </IconContext.Provider>
+                          </div>
                           <div>
                             <Typography.Text
-                              style={{ width: '100%', color: 'grey' }}
+                              style={{ width: '80px', color: 'grey' }}
                               ellipsis={{ tooltip: skill.title }}
                             >
                               {skill.title}
@@ -104,10 +115,19 @@ const Skill = ({ Data, i18 }) => {
                         bordered={true}
                       >
                         <Space direction="vertical">
-                          <div>{skill.icon}</div>
+                          <div>
+                            <IconContext.Provider
+                              value={{
+                                size: skillIconSize,
+                                color: skill.iconColor,
+                              }}
+                            >
+                              {skill.icon}
+                            </IconContext.Provider>
+                          </div>
                           <div>
                             <Typography.Text
-                              style={{ width: '100%', color: 'grey' }}
+                              style={{ width: '80px', color: 'grey' }}
                               ellipsis={{ tooltip: skill.title }}
                             >
                               {skill.title}

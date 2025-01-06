@@ -1,4 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import About from './components/About';
 import Contact from './components/Contact';
 import Education from './components/Education';
@@ -7,6 +13,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Project from './components/Project';
+import Printable from './components/Printable/Printable';
 import Skill from './components/Skill';
 import { ThemeContext } from './contexts/ThemeContext';
 import 'antd/dist/reset.css';
@@ -15,13 +22,37 @@ import { Languages } from './components/Data';
 import { I18 } from './i18/i18';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
-function App() {
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+};
+
+const AppContent = () => {
   const [theme] = useContext(ThemeContext);
+  const [language, setLanguage] = useLocalStorage('language', 'EN');
   const [data, setData] = useState(Languages.EN);
   const [i18, setI18] = useState(I18.EN);
 
+  const location = useLocation();
+  const showHeaderFooter = location.pathname !== '/print';
+
   const onLanguageChange = (language) => {
+    if (language === 'ES') {
+      setLanguage(language);
+    } else {
+      setLanguage('EN');
+    }
+  };
+
+  console.log('HERE');
+
+  useEffect(() => {
+    console.log('ASDSADSA AS', language);
     if (language === 'ES') {
       setData(Languages.ES);
       setI18(I18.ES);
@@ -29,7 +60,7 @@ function App() {
       setData(Languages.EN);
       setI18(I18.EN);
     }
-  };
+  }, [language]);
 
   useEffect(() => {
     AOS.init({
@@ -72,19 +103,34 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header Data={data} i18={i18} OnLanguageChange={onLanguageChange} />
+      {showHeaderFooter && (
+        <Header Data={data} i18={i18} OnLanguageChange={onLanguageChange} />
+      )}
+
       <div className="page-content">
-        <Profile Data={data} i18={i18} />
-        <About Data={data} i18={i18} />
-        <Skill Data={data} i18={i18} />
-        <Experience Data={data} i18={i18} />
-        <Education Data={data} i18={i18} />
-        <Project Data={data} i18={i18} />
-        <Contact Data={data} i18={i18} />
+        <Routes>
+          <Route path="/" element={<LandingPage Data={data} i18={i18} />} />
+          <Route path="/print" element={<Printable Data={data} i18={i18} />} />
+        </Routes>
       </div>
-      <Footer Data={data} i18={i18} />
+
+      {showHeaderFooter && <Footer Data={data} i18={i18} />}
     </React.Fragment>
   );
-}
+};
+
+const LandingPage = ({ Data, i18 }) => {
+  return (
+    <React.Fragment>
+      <Profile Data={Data} i18={i18} />
+      <About Data={Data} i18={i18} />
+      <Skill Data={Data} i18={i18} />
+      <Experience Data={Data} i18={i18} />
+      <Education Data={Data} i18={i18} />
+      <Project Data={Data} i18={i18} />
+      <Contact Data={Data} i18={i18} />
+    </React.Fragment>
+  );
+};
 
 export default App;

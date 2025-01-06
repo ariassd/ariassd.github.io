@@ -12,29 +12,27 @@ import {
   FaVuejs,
   FaBalanceScaleRight,
   FaGraduationCap,
+  FaFont,
 } from 'react-icons/fa';
 import { SiNestjs, SiConfluence, SiUpwork } from 'react-icons/si';
 import { DiScrum, DiJira } from 'react-icons/di';
 import { ImMail4 } from 'react-icons/im';
 import { GiArcheryTarget, GiOpenBook, GiCompass } from 'react-icons/gi';
 import { RiTwitterFill } from 'react-icons/ri';
-import { FaHandsHoldingChild } from 'react-icons/fa6';
+import { FaHandsHoldingChild, FaBinoculars } from 'react-icons/fa6';
 import { LuBrainCircuit } from 'react-icons/lu';
-import { TbClockDollar } from 'react-icons/tb';
-import { FcBinoculars } from 'react-icons/fc';
-
+import { TbClockDollar, TbBrandCSharp } from 'react-icons/tb';
+import { CgWebsite } from 'react-icons/cg';
 import {
-  // SiCsharp,
   SiCss3,
   SiJavascript,
   SiJquery,
   SiMongodb,
   SiMysql,
+  SiNpm,
 } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
-
-const skillIconSize = '4rem';
+import { VscVscode } from 'react-icons/vsc';
 
 const getExperienceDuration = () => {
   return `${getExperienceDurationNumber()}+ years of experience`;
@@ -119,11 +117,16 @@ const about = {
       <p></p>
     </React.Fragment>
   ),
+  languages: [
+    { name: 'English', level: 'B2+' },
+    { name: 'Spanish', level: 'Native' },
+  ],
   phone: '8735-3483',
   email: 'ariassd@gmail.com',
   address: 'Santa Bárbara, Heredia, CR',
   university: 'Universidad Nacional de Costa Rica',
   github: 'https://github.com/ariassd',
+  npm: 'https://www.npmjs.com/~ariassd',
   upWork: 'https://www.upwork.com/freelancers/~01eb5047d927060e0f',
   googleEmbeddedMapUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16488.303254307222!2d-84.16018712971946!3d10.040621990552403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f090cae464d3%3A0x6e4e1a4fd5658e1!2sHeredia%20Province%2C%20Santa%20B%C3%A1rbara%20de%20Heredia%2C%20Costa%20Rica!5e1!3m2!1sen!2sch!4v1736033206778!5m2!1sen!2sch',
@@ -134,10 +137,10 @@ const about = {
   cv: '',
   formspree: 'https://formspree.io/f/xzbydyqb',
   taglines: [
-    'FULL STACK DEVELOPER',
-    'WEB APPLICATION DEVELOPER',
-    'SOFTWARE ENGINEER',
-    'ENGINEER MANAGER',
+    'Full stack developer',
+    'Web application developer',
+    'Engineer manager',
+    'Software architecture',
   ],
   paymentMethods: {
     crypto: {
@@ -175,229 +178,178 @@ const skills = [
   {
     type: 'soft',
     title: 'Leadership',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#FF5733' }}>
-        <GiCompass />
-      </IconContext.Provider>
-    ),
+    iconColor: '#FF5733',
+    skillQualification: 5,
+    icon: <GiCompass />,
   },
   {
     type: 'soft',
     title: 'Team building',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#1E90FF' }}>
-        <FaHandsHoldingChild />
-      </IconContext.Provider>
-    ),
+    iconColor: '#1E90FF',
+    skillQualification: 7,
+    icon: <FaHandsHoldingChild />,
   },
   {
     type: 'soft',
     title: 'Resilient',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#6A5ACD' }}>
-        <LuBrainCircuit />
-      </IconContext.Provider>
-    ),
+    iconColor: '#6A5ACD',
+    skillQualification: 9,
+    icon: <LuBrainCircuit />,
   },
   {
     type: 'soft',
     title: 'Problem solving',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#FFD700' }}>
-        <GiArcheryTarget />
-      </IconContext.Provider>
-    ),
+    iconColor: '#FFD700',
+    skillQualification: 9,
+    icon: <GiArcheryTarget />,
   },
   {
     type: 'soft',
     title: 'Work Ethic',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#8B4513' }}>
-        <FaBalanceScaleRight />
-      </IconContext.Provider>
-    ),
+    iconColor: '#8B4513',
+    skillQualification: 10,
+    icon: <FaBalanceScaleRight />,
   },
   {
     type: 'soft',
     title: 'Transparency',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#00CED1' }}>
-        <GiOpenBook />
-      </IconContext.Provider>
-    ),
+    iconColor: '#00CED1',
+    skillQualification: 10,
+    icon: <GiOpenBook />,
   },
   {
     type: 'soft',
     title: 'Time management',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#FF4500' }}>
-        <TbClockDollar />
-      </IconContext.Provider>
-    ),
+    iconColor: '#FF4500',
+    skillQualification: 8,
+    icon: <TbClockDollar />,
   },
   {
     type: 'soft',
     title: 'Curiosity',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#7B68EE' }}>
-        <FcBinoculars />
-      </IconContext.Provider>
-    ),
+    iconColor: '#7B68EE',
+    skillQualification: 10,
+    icon: <FaBinoculars />,
   },
   {
     type: 'soft',
     title: 'Continuous learning',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#4682B4' }}>
-        <FaGraduationCap />
-      </IconContext.Provider>
-    ),
+    iconColor: '#4682B4',
+    skillQualification: 7,
+    icon: <FaGraduationCap />,
   },
   {
     type: 'hard',
     title: 'SCRUM',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#007ACC' }}>
-        <DiScrum />
-      </IconContext.Provider>
-    ),
+    iconColor: '#007ACC',
+    skillQualification: 7,
+    icon: <DiScrum />,
   },
   {
     type: 'hard',
     title: 'Jira',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#0052CC' }}>
-        <DiJira />
-      </IconContext.Provider>
-    ),
+    iconColor: '#0052CC',
+    skillQualification: 7,
+    icon: <DiJira />,
   },
   {
     type: 'hard',
     title: ' Confluence',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#172B4D' }}>
-        <SiConfluence />
-      </IconContext.Provider>
-    ),
+    iconColor: '#172B4D',
+    skillQualification: 8,
+    icon: <SiConfluence />,
   },
 
   {
     type: 'hard',
     title: 'NestJS',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#E0234E' }}>
-        <SiNestjs />
-      </IconContext.Provider>
-    ),
+    iconColor: '#E0234E',
+    skillQualification: 7,
+    icon: <SiNestjs />,
   },
   {
     type: 'hard',
     title: 'JavaScript',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#E1CC1B' }}>
-        <SiJavascript />
-      </IconContext.Provider>
-    ),
+    iconColor: '#E1CC1B',
+    skillQualification: 8,
+    icon: <SiJavascript />,
   },
   {
     type: 'hard',
     title: 'React.js',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#31B2FB' }}>
-        <FaReact />
-      </IconContext.Provider>
-    ),
+    iconColor: '#31B2FB',
+    skillQualification: 6,
+    icon: <FaReact />,
   },
   {
     type: 'hard',
     title: 'Vue.js',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#42B983' }}>
-        <FaVuejs />
-      </IconContext.Provider>
-    ),
+    iconColor: '#42B983',
+    skillQualification: 4,
+    icon: <FaVuejs />,
   },
   {
     type: 'hard',
     title: 'Node.js',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#5C9553' }}>
-        <FaNode />
-      </IconContext.Provider>
-    ),
+    iconColor: '#5C9553',
+    skillQualification: 8,
+    icon: <FaNode />,
   },
   {
     type: 'hard',
     title: 'jQuery',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
-        <SiJquery />
-      </IconContext.Provider>
-    ),
+    iconColor: '#0769AD',
+    skillQualification: 7,
+    icon: <SiJquery />,
   },
   {
     type: 'hard',
     title: '.net framework',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#0769AD' }}>
-        {/* <SiCsharp /> */}
-        <TbBrandCSharp />
-      </IconContext.Provider>
-    ),
+    iconColor: '#0769AD',
+    skillQualification: 5,
+    icon: <TbBrandCSharp />,
   },
   {
     type: 'hard',
     title: 'MySQL',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#4479A1' }}>
-        <SiMysql />
-      </IconContext.Provider>
-    ),
+    iconColor: '#4479A1',
+    skillQualification: 4,
+    icon: <SiMysql />,
   },
   {
     type: 'hard',
     title: 'MongoDB',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#4479A1' }}>
-        <SiMongodb />
-      </IconContext.Provider>
-    ),
+    iconColor: '#4479A1',
+    skillQualification: 7,
+    icon: <SiMongodb />,
   },
   {
     type: 'hard',
     title: 'GitHub',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#F44D27' }}>
-        <FaGithubAlt />
-      </IconContext.Provider>
-    ),
+    iconColor: '#F44D27',
+    skillQualification: 8,
+    icon: <FaGithubAlt />,
   },
   {
     type: 'hard',
     title: 'GitLab',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#F44D27' }}>
-        <FaGitlab />
-      </IconContext.Provider>
-    ),
+    iconColor: '#F44D27',
+    skillQualification: 8,
+    icon: <FaGitlab />,
   },
   {
     type: 'hard',
     title: 'CSS',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#2862E9' }}>
-        <SiCss3 />
-      </IconContext.Provider>
-    ),
+    iconColor: '#2862E9',
+    skillQualification: 6,
+    icon: <SiCss3 />,
   },
   {
     type: 'hard',
     title: 'Bootstrap',
-    icon: (
-      <IconContext.Provider value={{ size: skillIconSize, color: '#533B78' }}>
-        <FaBootstrap />
-      </IconContext.Provider>
-    ),
+    iconColor: '#533B78',
+    skillQualification: 6,
+    icon: <FaBootstrap />,
   },
 ];
 
@@ -409,6 +361,7 @@ const projects = [
       process.env.PUBLIC_URL +
         '/assets/img/projects/easy-portforward/screenshot.png',
     ],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'express, websocket',
@@ -440,6 +393,7 @@ const projects = [
   {
     title: 'Techoryze platform',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sm.png',
+    icon: <CgWebsite />,
     images: [
       process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc1.png',
       process.env.PUBLIC_URL + '/assets/img/projects/techoryze/sc2.png',
@@ -482,6 +436,7 @@ const projects = [
     title: 'Easy CSV 2 JSON',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'Typescript.js',
@@ -514,6 +469,7 @@ const projects = [
     title: 'Easy ws api proxy',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'Typescript.js',
@@ -547,6 +503,7 @@ const projects = [
     title: 'Easy JSON Diff',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'Typescript.js',
@@ -574,6 +531,7 @@ const projects = [
     title: 'Easy postman 2 markdown',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'Typescript.js',
@@ -610,6 +568,7 @@ const projects = [
     images: [
       'https://github.com/ariassd/crypto-animal-font/raw/master/assets/ancient-egypt-banner.png',
     ],
+    icon: <FaFont />,
     skills: [
       {
         title: 'FontLab7',
@@ -635,6 +594,7 @@ const projects = [
     title: 'Snack Query Builder NPM',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNpm />,
     skills: [
       {
         title: 'Typescript.js',
@@ -667,6 +627,7 @@ const projects = [
     title: 'NestJS Date format interceptor',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
+    icon: <SiNestjs />,
     skills: [
       {
         title: 'Typescript.js',
@@ -699,6 +660,7 @@ const projects = [
     title: 'Numbers To Words Spanish',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/csharp.png',
     images: [process.env.PUBLIC_URL + '/assets/img/csharp.png'],
+    icon: <TbBrandCSharp />,
     skills: [
       {
         title: 'C#',
@@ -728,6 +690,7 @@ const projects = [
     title: 'Address book',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/csharp.png',
     images: [process.env.PUBLIC_URL + '/assets/img/csharp.png'],
+    icon: <TbBrandCSharp />,
     skills: [
       {
         title: 'C#',
@@ -757,6 +720,7 @@ const projects = [
     title: 'ScreenDraw 1.0 For Windows',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/csharp.png',
     images: [process.env.PUBLIC_URL + '/assets/img/csharp.png'],
+    icon: <TbBrandCSharp />,
     skills: [
       {
         title: 'C#',
@@ -785,6 +749,7 @@ const projects = [
     title: 'Terminal loader',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/vscode.png',
     images: [process.env.PUBLIC_URL + '/assets/img/vscode.png'],
+    icon: <VscVscode />,
     skills: [
       {
         title: 'typescript',
@@ -976,6 +941,15 @@ const socialLinks = [
       </IconContext.Provider>
     ),
     link: about.github,
+  },
+  {
+    title: 'npm',
+    icon: (
+      <IconContext.Provider value={{ size: '1.4rem' }}>
+        <SiNpm />
+      </IconContext.Provider>
+    ),
+    link: about.npm,
   },
   {
     title: 'Upwork',

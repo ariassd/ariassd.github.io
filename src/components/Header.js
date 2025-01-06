@@ -96,8 +96,8 @@ const Header = ({ Data, i18, OnLanguageChange }) => {
                   </li>
                   <li className="nav-item">
                     <a
-                      className="nav-link smooth-scroll"
                       href="javascript:void(0)"
+                      className="nav-link smooth-scroll"
                       onClick={() => changeLanguage()}
                     >
                       {language}

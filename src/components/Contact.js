@@ -10,8 +10,10 @@ import {
 import { ImFilePdf } from 'react-icons/im';
 import ReactiveButton from 'reactive-button';
 import StyledContainer from './StyledContainer';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = ({ Data, i18 }) => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <div className="section" id="contact">
@@ -174,18 +176,25 @@ const Contact = ({ Data, i18 }) => {
                               <strong>{i18.LBL_CV}</strong>
                             </p>
                             <div>
-                              <a
-                                href={Data.about.cv}
-                                className="text-muted"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <IconContext.Provider
-                                  value={{ size: '1.5rem' }}
-                                >
-                                  <ImFilePdf />
-                                </IconContext.Provider>
-                              </a>
+                              {/* PRINT */}
+
+                              <ReactiveButton
+                                style={{ fontSize: '0.8571em' }}
+                                idleText={
+                                  <React.Fragment>
+                                    <IconContext.Provider
+                                      value={{ size: '1.5rem' }}
+                                    >
+                                      <ImFilePdf />
+                                    </IconContext.Provider>{' '}
+                                    {i18.LBL_CV}
+                                  </React.Fragment>
+                                }
+                                className="mt-4"
+                                onClick={() => {
+                                  navigate('/print?f=pdf');
+                                }}
+                              />
                             </div>
                           </React.Fragment>
                         )}

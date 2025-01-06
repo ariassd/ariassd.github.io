@@ -25,5 +25,11 @@
       }
     ],
     "react/prop-types": "off"
+  },
+  "ignorePatterns": ["assets/", "public/", "build/"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

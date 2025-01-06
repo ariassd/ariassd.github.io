@@ -15,8 +15,8 @@ export const useLocalStorage = (key, initialValue) => {
     try {
       const valueToStore =
         value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore); // Update state
-      localStorage.setItem(key, JSON.stringify(valueToStore)); // Sync with localStorage
+      setStoredValue(valueToStore);
+      localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
       console.log(error);
     }
