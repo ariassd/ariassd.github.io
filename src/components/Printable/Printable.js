@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Col, Row, Typography } from 'antd';
+import { IconContext } from 'react-icons';
 
 import { AntDesignOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
@@ -15,12 +16,14 @@ import Education from './Education';
 import { FaLanguage } from 'react-icons/fa';
 import { MdMarkEmailUnread } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 const cssPageColumn = {
   padding: '0 20px',
 };
 
 const Printable = ({ Data, i18 }) => {
+  const navigate = useNavigate();
   let [searchParams] = useSearchParams();
   let [printCounter, setPrintCounter] = useState(0);
 
@@ -28,26 +31,40 @@ const Printable = ({ Data, i18 }) => {
     (i) => i.link.includes('linkedin') || i.link.includes('git'),
   );
 
+  const handleAfterPrint = () => {
+    navigate('/');
+    window.removeEventListener('afterprint', handleAfterPrint);
+  };
+
+  links.unshift({
+    icon: <MdMarkEmailUnread />,
+    link: Data.about.email,
+  });
+
   useEffect(() => {
     document.title = `${Data.about.name} ${i18.TIT_PAGE_TITLE}`;
     setPrintCounter(printCounter + 1);
   }, []);
 
   useEffect(() => {
+    window.addEventListener('afterprint', handleAfterPrint);
     if (printCounter === 1 && searchParams.get('f') == 'pdf') {
       window.print();
-      window.history.back();
     }
   }, [printCounter]);
 
   return (
     <React.Fragment>
-      <div className="section" id="printable">
+      <div
+        className="section"
+        id="printable"
+        style={{ maxWidth: '900', margin: 'auto' }}
+      >
         <Row>
-          <Col span={3}>
+          <Col span={6}>
             <Avatar
               src={process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'}
-              size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 100, xxl: 100 }}
+              size={{ xs: 1, sm: 64, md: 80, lg: 128, xl: 128, xxl: 200 }}
               icon={<AntDesignOutlined />}
             />
           </Col>
@@ -81,18 +98,17 @@ const Printable = ({ Data, i18 }) => {
           <Col span={6}>
             <Typography.Paragraph>
               <Typography.Text>
-                <div>
-                  <MdMarkEmailUnread /> {Data.about.email}
-                </div>
                 {links.map((i, ix) => (
                   <div key={ix}>
-                    {i.icon} {i.link}
+                    <IconContext.Provider value={{ size: '1.4rem' }}>
+                      {i.icon}
+                    </IconContext.Provider>{' '}
+                    {i.link}
                   </div>
                 ))}
               </Typography.Text>
             </Typography.Paragraph>
           </Col>
-          <Col span={3}></Col>
         </Row>
         <Row>
           <Col span={12} style={cssPageColumn}>
@@ -104,7 +120,7 @@ const Printable = ({ Data, i18 }) => {
           </Col>
         </Row>
         {/* Page number 2 */}
-        <div style={{ breakAfter: 'page' }}></div>
+        {/* <div style={{ breakAfter: 'page' }}></div> */}
         <Row>
           <Col span={24} style={cssPageColumn}>
             <Skills Data={Data} i18={i18} type="soft" />

@@ -97,10 +97,9 @@ const about = {
         of a big company located in Switzerland.
       </p>
       <p>
-        I have created, developed, invented and implement lot of automation
-        processes, applications, web sites, excel documents and google
-        spreadsheet using scripting and tailored scripts. I also have a good eye
-        for design.
+        I have created, developed and implement lot of automation processes,
+        applications, web sites, excel documents and google spreadsheet using
+        tailored scripting.
       </p>
       <p>
         I specialize in creating simple solutions to complex problems and I have
@@ -135,7 +134,8 @@ const about = {
   hideEmail: true,
   hideMap: false,
   cv: '',
-  formspree: 'https://formspree.io/f/xzbydyqb',
+  // formspree: 'https://formspree.io/f/xzbydyqb',
+  formspree: 'https://submit-form.com/HcQveZtnW',
   taglines: [
     'Full stack developer',
     'Web application developer',
@@ -172,6 +172,7 @@ const about = {
       ],
     },
   },
+  openToWork: true,
 };
 
 const skills = [
@@ -926,56 +927,32 @@ const education = [
 const socialLinks = [
   {
     title: 'linkedin',
-    icon: (
-      <IconContext.Provider value={{ size: '1.9rem' }}>
-        <TiSocialLinkedinCircular />
-      </IconContext.Provider>
-    ),
+    icon: <TiSocialLinkedinCircular />,
     link: 'https://www.linkedin.com/in/ariassd/',
   },
   {
     title: 'github',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <FaGithub />
-      </IconContext.Provider>
-    ),
+    icon: <FaGithub />,
     link: about.github,
   },
   {
     title: 'npm',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <SiNpm />
-      </IconContext.Provider>
-    ),
+    icon: <SiNpm />,
     link: about.npm,
   },
   {
     title: 'Upwork',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <SiUpwork />
-      </IconContext.Provider>
-    ),
+    icon: <SiUpwork />,
     link: about.upWork,
   },
   {
     title: 'twitter',
-    icon: (
-      <IconContext.Provider value={{ size: '1.5rem' }}>
-        <RiTwitterFill />
-      </IconContext.Provider>
-    ),
+    icon: <RiTwitterFill />,
     link: 'https://www.twitter.com/ariassd',
   },
   {
     title: 'email',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <ImMail4 />
-      </IconContext.Provider>
-    ),
+    icon: <ImMail4 />,
     link: `mailto:${about.email}`,
   },
 ];

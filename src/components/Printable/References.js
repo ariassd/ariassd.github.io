@@ -45,7 +45,7 @@ const References = ({ Data, i18 }) => {
                 fontSize: '0.8em',
               }}
             >
-              {Data.getExperienceDuration()}
+              {'--o--'}
               <hr />
             </Typography.Text>
           </Col>

@@ -1,12 +1,7 @@
 import { Card, Col, Row, Typography } from 'antd';
 import React from 'react';
 import { IconContext } from 'react-icons';
-import {
-  FaEnvelope,
-  FaFileAlt,
-  FaPaperPlane,
-  FaUserCircle,
-} from 'react-icons/fa';
+import { FaEnvelope, FaPaperPlane, FaUserCircle } from 'react-icons/fa';
 import { ImFilePdf } from 'react-icons/im';
 import ReactiveButton from 'reactive-button';
 import StyledContainer from './StyledContainer';
@@ -67,7 +62,7 @@ const Contact = ({ Data, i18 }) => {
                               </div>
                             </div>
                           </div>
-                          <div className="row mb-3">
+                          {/* <div className="row mb-3">
                             <div className="col">
                               <div className="input-group">
                                 <span className="input-group-addon text-primary center-this">
@@ -82,7 +77,7 @@ const Contact = ({ Data, i18 }) => {
                                 />
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="row mb-3">
                             <div className="col">
                               <div className="input-group">
@@ -92,7 +87,7 @@ const Contact = ({ Data, i18 }) => {
                                 <input
                                   className="form-control"
                                   type="email"
-                                  name="_replyto"
+                                  name="email"
                                   placeholder={i18.LBL_EMAIL}
                                   required="required"
                                 />

@@ -101,18 +101,17 @@ const about = {
       </p>
 
       <p>
-        He creado, desarrollado, inventado e implementado muchos procesos de
+        He creado, desarrollado e implementado muchos procesos de
         automatización, aplicaciones, sitios web, documentos de Excel y hojas de
-        cálculo de Google utilizando scripts y scripts a medida. También tengo
-        buen ojo para el diseño.
+        cálculo de Google utilizando scripts a medida.
       </p>
 
       <p>
         Me especializo en crear soluciones simples para problemas complejos y
         tengo una verdadera habilidad para hacer que mi software sea fácil de
-        operar, añadiendo configuraciones y documentación útil también. Creo que
-        una solución bien diseñada no solo se verá mucho mejor, sino que será
-        mucho más fácil de entender y operar.
+        operar, añadiendo configuraciones y documentación útil también. Estoy
+        convencido de que una solución bien diseñada no solo se verá mucho
+        mejor, sino que será mucho más fácil de entender y operar.
       </p>
 
       <p>
@@ -178,6 +177,7 @@ const about = {
       ],
     },
   },
+  openToWork: true,
 };
 
 const skills = [
@@ -935,56 +935,32 @@ const education = [
 const socialLinks = [
   {
     title: 'linkedin',
-    icon: (
-      <IconContext.Provider value={{ size: '1.9rem' }}>
-        <TiSocialLinkedinCircular />
-      </IconContext.Provider>
-    ),
+    icon: <TiSocialLinkedinCircular />,
     link: 'https://www.linkedin.com/in/ariassd/',
   },
   {
     title: 'github',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <FaGithub />
-      </IconContext.Provider>
-    ),
+    icon: <FaGithub />,
     link: about.github,
   },
   {
     title: 'npm',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <SiNpm />
-      </IconContext.Provider>
-    ),
+    icon: <SiNpm />,
     link: about.npm,
   },
   {
     title: 'Upwork',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <SiUpwork />
-      </IconContext.Provider>
-    ),
+    icon: <SiUpwork />,
     link: about.upWork,
   },
   {
     title: 'twitter',
-    icon: (
-      <IconContext.Provider value={{ size: '1.5rem' }}>
-        <RiTwitterFill />
-      </IconContext.Provider>
-    ),
+    icon: <RiTwitterFill />,
     link: 'https://www.twitter.com/ariassd',
   },
   {
     title: 'email',
-    icon: (
-      <IconContext.Provider value={{ size: '1.4rem' }}>
-        <ImMail4 />
-      </IconContext.Provider>
-    ),
+    icon: <ImMail4 />,
     link: `mailto:${about.email}`,
   },
 ];
@@ -1018,7 +994,7 @@ const references = [
     to: 2017,
     company: 'Banco BCT S.A',
     relationShip:
-      'En primer lugar, trabajé junto con Orlando en el Departamento de Banca en línea, más tarde Orlando se convirtió en gerente',
+      'En primer lugar, trabajé junto con Orlando en el Departamento de Banca en línea, más tarde Orlando tomo un puesto de lider del equipo',
   },
   {
     name: 'Lisette Ureña Porras',

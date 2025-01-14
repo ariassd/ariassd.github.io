@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactiveButton from 'reactive-button';
 import { useNavigate } from 'react-router-dom';
-
+import { IconContext } from 'react-icons';
 import { ReactTyped } from 'react-typed';
 import { Image } from 'antd';
 
@@ -25,9 +25,7 @@ const Profile = ({ Data, i18 }) => {
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a href="#">
                     <Image
-                      src={
-                        process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'
-                      }
+                      src={`assets/img/LuisArias.jpeg`}
                       style={{
                         width: '100%',
                         maxWidth: '180px',
@@ -37,15 +35,36 @@ const Profile = ({ Data, i18 }) => {
                       placeholder={
                         <Image
                           preview={false}
-                          src={
-                            process.env.PUBLIC_URL +
-                            '/assets/img/luisarias-min.jpg'
-                          }
+                          src={`assets/img/luisarias-min.jpg`}
                         />
                       }
                     />
                   </a>
                 </div>
+                {Data.about.openToWork && (
+                  <div
+                    className="cc-profile-image"
+                    style={{
+                      position: 'absolute',
+                      top: '0',
+                      left: '0',
+                      width: '100%',
+                    }}
+                  >
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                    <a href="#">
+                      <Image
+                        src={`assets/img/open-to-work.png`}
+                        style={{
+                          maxWidth: '190px',
+                          height: 'auto',
+                        }}
+                        preview={false}
+                      />
+                    </a>
+                  </div>
+                )}
+
                 <div className="h2 title">{Data.about.name}</div>
                 <p className="category text-white">
                   <ReactTyped
@@ -88,7 +107,9 @@ const Profile = ({ Data, i18 }) => {
                       title={socialLink.title}
                       rel="noopener noreferrer"
                     >
-                      {socialLink.icon}
+                      <IconContext.Provider value={{ size: '1.4rem' }}>
+                        {socialLink.icon}
+                      </IconContext.Provider>
                     </a>
                   ))}
                 </div>
