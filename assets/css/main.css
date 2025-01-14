@@ -7930,14 +7930,3 @@ a.credit {
   font-size: 18px !important;
   font-weight: normal !important;
 }
-
-.avatar-open-to-work-circle::before {
-  position: absolute;
-  content: '';
-  width: 12.7rem;
-  height: 12.7rem;
-  border: solid transparent 15px;
-  border-right: solid green 15px;
-  border-radius: 50%;
-  transform: rotate(45deg);
-}
