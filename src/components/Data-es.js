@@ -4,7 +4,6 @@ import { IconContext } from 'react-icons';
 import { BiDonateHeart } from 'react-icons/bi';
 import {
   FaBootstrap,
-  FaGithub,
   FaGithubAlt,
   FaGitlab,
   FaNode,
@@ -14,18 +13,15 @@ import {
   FaGraduationCap,
   FaFont,
 } from 'react-icons/fa';
-import { SiNestjs, SiConfluence, SiUpwork } from 'react-icons/si';
+import { SiNestjs, SiConfluence } from 'react-icons/si';
 import { DiScrum, DiJira } from 'react-icons/di';
-import { ImMail4 } from 'react-icons/im';
 import { GiArcheryTarget, GiOpenBook, GiCompass } from 'react-icons/gi';
-import { RiTwitterFill } from 'react-icons/ri';
 import { FaHandsHoldingChild, FaBinoculars } from 'react-icons/fa6';
 import { LuBrainCircuit } from 'react-icons/lu';
 import { TbClockDollar, TbBrandCSharp } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
 
 import {
-  // SiCsharp,
   SiCss3,
   SiJavascript,
   SiJquery,
@@ -33,7 +29,6 @@ import {
   SiMysql,
   SiNpm,
 } from 'react-icons/si';
-import { TiSocialLinkedinCircular } from 'react-icons/ti';
 import { VscVscode } from 'react-icons/vsc';
 
 const getExperienceDuration = () => {
@@ -73,7 +68,6 @@ const defaultThemeColor = {
 };
 
 const about = {
-  name: 'Luis Arias',
   details: (
     <React.Fragment>
       <p>
@@ -126,21 +120,6 @@ const about = {
     { name: 'English', level: 'B2+' },
     { name: 'Spanish', level: 'Native' },
   ],
-  phone: '8735-3483',
-  email: 'ariassd@gmail.com',
-  address: 'Santa Bárbara, Heredia, CR',
-  university: 'Universidad Nacional de Costa Rica',
-  github: 'https://github.com/ariassd',
-  npm: 'https://www.npmjs.com/~ariassd',
-  upWork: 'https://www.upwork.com/freelancers/~01eb5047d927060e0f',
-  googleEmbeddedMapUrl:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.3263166936113!2d-84.15768331774679!3d10.072325737623318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA0JzIwLjQiTiA4NMKwMDknMjIuMSJX!5e0!3m2!1sen!2scr!4v1620427865488!5m2!1sen!2scr',
-  hideCv: false,
-  hidePhone: true,
-  hideEmail: true,
-  hideMap: false,
-  cv: '',
-  formspree: 'https://formspree.io/f/xzbydyqb',
   taglines: [
     'Desarrollador full stack',
     'Desarrollador web',
@@ -177,7 +156,6 @@ const about = {
       ],
     },
   },
-  openToWork: true,
 };
 
 const skills = [
@@ -932,39 +910,6 @@ const education = [
   },
 ];
 
-const socialLinks = [
-  {
-    title: 'linkedin',
-    icon: <TiSocialLinkedinCircular />,
-    link: 'https://www.linkedin.com/in/ariassd/',
-  },
-  {
-    title: 'github',
-    icon: <FaGithub />,
-    link: about.github,
-  },
-  {
-    title: 'npm',
-    icon: <SiNpm />,
-    link: about.npm,
-  },
-  {
-    title: 'Upwork',
-    icon: <SiUpwork />,
-    link: about.upWork,
-  },
-  {
-    title: 'twitter',
-    icon: <RiTwitterFill />,
-    link: 'https://www.twitter.com/ariassd',
-  },
-  {
-    title: 'email',
-    icon: <ImMail4 />,
-    link: `mailto:${about.email}`,
-  },
-];
-
 const references = [
   {
     name: 'Leonardo Monge',
@@ -1025,7 +970,6 @@ const DataEs = {
   projects,
   experiences,
   education,
-  socialLinks,
   getExperienceDuration,
   references,
 };

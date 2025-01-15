@@ -1,5 +1,6 @@
 import { Tooltip } from 'antd';
 import React from 'react';
+import { IconContext } from 'react-icons';
 
 const Footer = ({ Data }) => {
   return (
@@ -15,7 +16,9 @@ const Footer = ({ Data }) => {
                 href={socialLink.link}
                 rel="noopener noreferrer"
               >
-                {socialLink.icon}
+                <IconContext.Provider value={{ size: '1.4rem' }}>
+                  {socialLink.icon}
+                </IconContext.Provider>
               </a>
             </Tooltip>
           ))}
@@ -30,7 +33,9 @@ const Footer = ({ Data }) => {
                   href={i.account}
                   rel="noopener noreferrer"
                 >
-                  {i.icon}
+                  <IconContext.Provider value={{ size: '1.4rem' }}>
+                    {i.icon}
+                  </IconContext.Provider>
                 </a>
               </Tooltip>
             ))}
@@ -39,7 +44,7 @@ const Footer = ({ Data }) => {
           {Data.about.name}{' '}
         </div>
         <div className="text-center text-muted">
-          <p>&copy; All rights reserved. @ {new Date().getFullYear()}</p>
+          <p>&copy; All rights reserved | {new Date().getFullYear()}</p>
         </div>
       </footer>
     </React.Fragment>

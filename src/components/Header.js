@@ -95,6 +95,7 @@ const Header = ({ Data, i18, OnLanguageChange }) => {
                     </a>
                   </li>
                   <li className="nav-item">
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a
                       href="javascript:void(0)"
                       className="nav-link smooth-scroll"

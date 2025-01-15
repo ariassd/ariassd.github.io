@@ -56,7 +56,9 @@ const Profile = ({ Data, i18 }) => {
                       <Image
                         src={`assets/img/open-to-work.png`}
                         style={{
-                          maxWidth: '190px',
+                          top: '1px',
+                          width: '100%',
+                          maxWidth: '181px',
                           height: 'auto',
                         }}
                         preview={false}

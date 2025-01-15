@@ -47,8 +47,16 @@ const Printable = ({ Data, i18 }) => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('afterprint', handleAfterPrint);
-    if (printCounter === 1 && searchParams.get('f') == 'pdf') {
+    const isMobile =
+      /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
+    if (isMobile == false) {
+      window.addEventListener('afterprint', handleAfterPrint);
+      if (printCounter === 1 && searchParams.get('f') == 'pdf') {
+        window.print();
+      }
+    } else {
       window.print();
     }
   }, [printCounter]);
