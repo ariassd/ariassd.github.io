@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useBreakpoint } from '../hooks/breakpoint';
 import StyledContainer from './StyledContainer';
+import CertificatePopup from './CertificatePopup';
+import { IconContext } from 'react-icons';
+import { PiCertificateLight } from 'react-icons/pi';
 
 const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
@@ -12,6 +15,8 @@ const Education = ({ Data, i18 }) => {
   const [loading, setLoading] = useState(true);
   const education = Data.education;
   const isMD = useBreakpoint();
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   useEffect(() => {
     setLoading(false);
@@ -31,25 +36,40 @@ const Education = ({ Data, i18 }) => {
         <Col span={24}>
           <Typography.Text strong>{item.degree}</Typography.Text>
         </Col>
+
         <Col span={24}>
           <List
             dir={!isMD || index % 2 === 0 ? 'lrl' : 'rtl'}
             size="small"
             split={false}
-            dataSource={item.info}
+            dataSource={item.certificate}
             renderItem={(subItem) => {
-              if (subItem.title && subItem.value) {
-                return (
-                  <StyledListItem>
-                    <Typography.Text style={{ fontSize: 12, color: 'gray' }}>
-                      <strong>{subItem.title}: </strong>
-                      {subItem.value}
-                    </Typography.Text>
-                  </StyledListItem>
-                );
-              }
+              return (
+                <StyledListItem>
+                  <Typography.Text style={{ fontSize: 12, color: 'gray' }}>
+                    <strong>{subItem?.title}: </strong>
+                    {subItem?.value}
+                  </Typography.Text>
+                </StyledListItem>
+              );
             }}
           />
+        </Col>
+        <Col span={24}>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a
+            href="javascript:void(0)"
+            onClick={() => {
+              setSelectedCertificate(item);
+              setModalVisible(true);
+            }}
+          >
+            <React.Fragment>
+              <IconContext.Provider value={{ size: '1.5rem' }}>
+                <PiCertificateLight />
+              </IconContext.Provider>{' '}
+            </React.Fragment>
+          </a>
         </Col>
       </Row>
     ),
@@ -90,6 +110,16 @@ const Education = ({ Data, i18 }) => {
           </Row>
         </StyledContainer>
       </div>
+      {modalVisible && (
+        <CertificatePopup
+          title={selectedCertificate ? selectedCertificate.title : ''}
+          educationItem={selectedCertificate}
+          visible={modalVisible}
+          handleCancel={() => {
+            setModalVisible(false);
+          }}
+        />
+      )}
     </React.Fragment>
   );
 };

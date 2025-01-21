@@ -9,8 +9,8 @@ import { ImMail4 } from 'react-icons/im';
 
 const aboutData = {
   name: 'Luis Arias',
-  phone: '8735-3483',
-  email: 'ariassd@gmail.com',
+  phone: '+506-xxxx-xx83',
+  email: 'arxxxxx@gmail.com',
   address: 'Santa Bárbara, Heredia, CR',
   university: 'Universidad Nacional de Costa Rica',
   github: 'https://github.com/ariassd',

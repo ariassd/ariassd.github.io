@@ -841,72 +841,84 @@ const education = [
     from: '2017',
     to: '2019',
     degree: 'Ingles conversasional, Level 12 ( level: 60% )',
+    category: 'Languages',
     info: [
       {
         title: 'TOEIC',
         value: 'B1',
       },
     ],
+    images: ['/assets/img/certificates/centro-cultural-idiomas.jpg'],
   },
   {
     institution: 'New horizons',
     from: '2015',
     to: '2015',
     degree: 'Certificación en HTML5, CSS, Javascript and MVC.net',
+    category: 'Technical',
     info: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificado',
+        value: 'Conclusión',
       },
     ],
+    images: ['/assets/img/education/new-horizons.png'],
   },
   {
     institution: 'Cenfotec',
     from: '2009',
     to: '2009',
     degree: 'Certificación en XML with Visual Studio',
+    category: 'Technical',
     info: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificado',
+        value: 'Conclusión',
       },
     ],
+    images: ['/assets/img/education/cenfotec.png'],
   },
   {
     institution: 'Universidad Nacional de Costa Rica',
     from: '2004',
     to: '2008',
     degree: 'Ingenieria de sistemas',
-    info: [
+    category: 'Universidad',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Bachillerato',
+        value: 'Incompleto',
       },
     ],
+    images: ['/assets/img/education/una.png'],
   },
   {
     institution: 'Liceo El Roble',
     from: '1997',
     to: '2002',
     degree: 'Estudios secundarios',
+    category: 'Colegio',
     info: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificado',
+        value: 'Conclusión',
       },
     ],
+    images: ['/assets/img/education/liceo-roble.jpeg'],
   },
   {
     institution: 'Liceo El Roble',
     from: '1990',
     to: '1996',
     degree: 'Escuela primaria',
+    category: 'Escuela',
     info: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificado',
+        value: 'Conclusión',
       },
     ],
+    images: ['/assets/img/education/liceo-roble.jpeg'],
   },
 ];
 

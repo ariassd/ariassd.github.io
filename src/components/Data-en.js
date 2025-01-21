@@ -833,72 +833,84 @@ const education = [
     from: '2017',
     to: '2019',
     degree: 'Speaking english, Level 12 ( level: 60% )',
-    info: [
+    category: 'Languages',
+    certificate: [
       {
         title: 'TOEIC',
         value: 'B1',
       },
     ],
+    images: ['/assets/img/education/centro-cultural-idiomas.jpg'],
   },
   {
     institution: 'New horizons',
     from: '2015',
     to: '2015',
     degree: 'Certification: in HTML5, CSS, Javascript and MVC.net',
-    info: [
+    category: 'Technical',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificate',
+        value: 'Completion',
       },
     ],
+    images: ['/assets/img/education/new-horizons.png'],
   },
   {
     institution: 'Cenfotec',
     from: '2009',
     to: '2009',
     degree: 'Certification: XML with Visual Studio',
-    info: [
+    category: 'Technical',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificate',
+        value: 'Completion',
       },
     ],
+    images: ['/assets/img/education/cenfotec.png'],
   },
   {
     institution: 'Universidad Nacional de Costa Rica',
     from: '2004',
     to: '2008',
     degree: 'System engineer',
-    info: [
+    category: 'University',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Bachelor',
+        value: 'Incomplete',
       },
     ],
+    images: ['/assets/img/education/una.png'],
   },
   {
     institution: 'Liceo El Roble',
     from: '1997',
     to: '2002',
     degree: 'Secondary studies',
-    info: [
+    category: 'High school',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificate',
+        value: 'Completion',
       },
     ],
+    images: ['/assets/img/education/liceo-roble.jpeg'],
   },
   {
     institution: 'Liceo El Roble',
     from: '1990',
     to: '1996',
     degree: 'Primary studies',
-    info: [
+    category: 'Elementary school',
+    certificate: [
       {
-        title: undefined,
-        value: undefined,
+        title: 'Certificate',
+        value: 'Completion',
       },
     ],
+    images: ['/assets/img/education/liceo-roble.jpeg'],
   },
 ];
 
