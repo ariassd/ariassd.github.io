@@ -4,7 +4,6 @@ import DataEs from './Data-es';
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiUpwork, SiNpm } from 'react-icons/si';
-import { RiTwitterFill } from 'react-icons/ri';
 import { ImMail4 } from 'react-icons/im';
 
 const aboutData = {
@@ -47,11 +46,6 @@ const socialLinks = [
     title: 'Upwork',
     icon: <SiUpwork />,
     link: aboutData.upWork,
-  },
-  {
-    title: 'twitter',
-    icon: <RiTwitterFill />,
-    link: 'https://www.twitter.com/ariassd',
   },
 ];
 

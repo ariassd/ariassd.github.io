@@ -22,23 +22,6 @@ const Footer = ({ Data }) => {
               </a>
             </Tooltip>
           ))}
-
-          {Data.about.paymentMethods.donate.show &&
-            Data.about.paymentMethods.donate.accounts.map((i, ix) => (
-              <Tooltip title={i.title} key={ix}>
-                <a
-                  key={ix}
-                  className="btn btn-link text-primary-light"
-                  target="_blank"
-                  href={i.account}
-                  rel="noopener noreferrer"
-                >
-                  <IconContext.Provider value={{ size: '1.4rem' }}>
-                    {i.icon}
-                  </IconContext.Provider>
-                </a>
-              </Tooltip>
-            ))}
         </div>
         <div className="h4 title text-center text-muted">
           {Data.about.name}{' '}

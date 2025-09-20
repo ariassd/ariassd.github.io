@@ -217,18 +217,6 @@ const Contact = ({ Data, i18 }) => {
               </Col>
             </Row>
           </StyledContainer>
-          {Data.about.paymentMethods.crypto.show &&
-            Data.about.paymentMethods.crypto.accounts.map((i, index) => (
-              <Row key={index} justify="center" align="middle">
-                <Col xl={4} lg={4} md={4} sm={4} xs={4}>
-                  <b>{i.type}: </b>
-                </Col>
-                <Col xl={4} lg={4} md={4} sm={4} xs={4}>
-                  <p>{i.account}</p>
-                </Col>
-                <Col xl={4} lg={4} md={4} sm={4} xs={4}></Col>
-              </Row>
-            ))}
         </div>
       </div>
     </React.Fragment>

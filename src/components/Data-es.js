@@ -1,7 +1,6 @@
 import moment from 'moment';
 import React from 'react';
-import { IconContext } from 'react-icons';
-import { BiDonateHeart } from 'react-icons/bi';
+
 import {
   FaBootstrap,
   FaGithubAlt,
@@ -126,36 +125,6 @@ const about = {
     'Gestion de equipos',
     'Arquitectura de software',
   ],
-  paymentMethods: {
-    crypto: {
-      show: false,
-      accounts: [
-        {
-          type: 'Bitcoin',
-          account: 'bc1qm2k9phlp77fnxa03zkhauh27r4yt9l5sn02zmc',
-        },
-        {
-          type: 'Ethereum',
-          account: '0x19d80C9c24002FCFd038d5Abee30766472fDF621',
-        },
-      ],
-    },
-    donate: {
-      show: true,
-      accounts: [
-        {
-          title: 'Hacer un donativo!',
-          type: 'Paypal',
-          account: 'https://paypal.me/LuisAriasCR?country.x=CR&locale.x=en_US',
-          icon: (
-            <IconContext.Provider value={{ size: '1.9rem' }}>
-              <BiDonateHeart />
-            </IconContext.Provider>
-          ),
-        },
-      ],
-    },
-  },
 };
 
 const skills = [
