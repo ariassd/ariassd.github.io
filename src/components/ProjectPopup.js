@@ -46,10 +46,10 @@ const ProjectPopup = (props) => {
 
     return (
         <StyledDrawer
-            zIndex={999999999}
+
             title={props.title}
             onClose={handleClose}
-            visible={visible}
+            open={visible}
             destroyOnClose={true}
             maskClosable={true}
             forceRender={true}
@@ -63,7 +63,7 @@ const ProjectPopup = (props) => {
                         <ReactiveButton
                             idleText={'Close'}
                             disabled={componentLoading}
-                            onClick={handleClose} 
+                            onClick={handleClose}
                             size={'small'}
                         />
                     </div>
@@ -113,13 +113,13 @@ const ProjectPopup = (props) => {
                     <Col span={24}>
                         {
                             props.project.categories.map((category, index) => (
-                                <Tag 
-                                    key={index} 
+                                <Tag
+                                    key={index}
                                     style={{
                                         textTransform: 'capitalize',
                                     }}>
-                                        {category}
-                                    </Tag>
+                                    {category}
+                                </Tag>
                             ))
                         }
                     </Col>
@@ -127,7 +127,7 @@ const ProjectPopup = (props) => {
                 {
                     (props.project.details !== null) && props.project.details !== '' && (
                         <React.Fragment>
-                            <Divider/>
+                            <Divider />
                             <StyledTitle>Description</StyledTitle>
                             <Row>
                                 <Col span={24}>
@@ -140,7 +140,7 @@ const ProjectPopup = (props) => {
                 {
                     props.project.links.map((link, index) => (
                         <React.Fragment key={index}>
-                            <Divider/>
+                            <Divider />
                             <StyledTitle>{link.title}</StyledTitle>
                             <Row>
                                 <Col span={24}>

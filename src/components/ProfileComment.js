@@ -7,7 +7,7 @@ const ProfileComment = ({ Data }) => {
   return (
     <Card
       style={{ marginBottom: 16, border: '1px solid #f0f0f0' }}
-      bordered={false}
+      variant="borderless"
       styles={{ body: { padding: '16px' } }}
     >
       <div style={{ display: 'flex', alignItems: 'center' }}>

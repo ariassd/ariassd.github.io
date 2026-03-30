@@ -26,14 +26,17 @@ const Printable = ({ Data, i18 }) => {
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
   let [printCounter, setPrintCounter] = useState(0);
+  const allowShowPrintingPage = true;
 
   const links = Data.socialLinks.filter(
     (i) => i.link.includes('linkedin') || i.link.includes('git'),
   );
 
   const handleAfterPrint = () => {
-    navigate('/');
-    window.removeEventListener('afterprint', handleAfterPrint);
+    if (allowShowPrintingPage == false) {
+      navigate('/');
+      window.removeEventListener('afterprint', handleAfterPrint);
+    }
   };
 
   links.unshift({
@@ -42,22 +45,26 @@ const Printable = ({ Data, i18 }) => {
   });
 
   useEffect(() => {
-    document.title = `${Data.about.name} ${i18.TIT_PAGE_TITLE}`;
-    setPrintCounter(printCounter + 1);
+    if (allowShowPrintingPage == false) {
+      document.title = `${Data.about.name} ${i18.TIT_PAGE_TITLE}`;
+      setPrintCounter(printCounter + 1);
+    }
   }, []);
 
   useEffect(() => {
-    const isMobile =
-      /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent,
-      );
-    if (isMobile == false) {
-      window.addEventListener('afterprint', handleAfterPrint);
-      if (printCounter === 1 && searchParams.get('f') == 'pdf') {
+    if (allowShowPrintingPage == false) {
+      const isMobile =
+        /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
+      if (isMobile == false) {
+        window.addEventListener('afterprint', handleAfterPrint);
+        if (printCounter === 1 && searchParams.get('f') == 'pdf') {
+          window.print();
+        }
+      } else {
         window.print();
       }
-    } else {
-      window.print();
     }
   }, [printCounter]);
 
@@ -70,11 +77,13 @@ const Printable = ({ Data, i18 }) => {
       >
         <Row>
           <Col span={6}>
-            <Avatar
-              src={process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'}
-              size={{ xs: 1, sm: 64, md: 80, lg: 128, xl: 128, xxl: 200 }}
-              icon={<AntDesignOutlined />}
-            />
+            <a href='/'>
+              <Avatar
+                src={process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'}
+                size={{ xs: 1, sm: 64, md: 80, lg: 128, xl: 128, xxl: 200 }}
+                icon={<AntDesignOutlined />}
+              />
+            </a>
           </Col>
           <Col span={6}>
             <Typography.Title level={4} style={{ textAlign: 'left' }}>
@@ -128,7 +137,7 @@ const Printable = ({ Data, i18 }) => {
           </Col>
         </Row>
         {/* Page number 2 */}
-        {/* <div style={{ breakAfter: 'page' }}></div> */}
+        <div style={{ breakAfter: 'page' }}></div>
         <Row>
           <Col span={24} style={cssPageColumn}>
             <Skills Data={Data} i18={i18} type="soft" />
@@ -149,7 +158,7 @@ const Printable = ({ Data, i18 }) => {
         </Row>
 
         {/* Page number 4 */}
-        <div style={{ breakAfter: 'page' }}></div>
+        {/* <div style={{ breakAfter: 'page' }}></div> */}
         <Row>
           <Col span={12} style={cssPageColumn}>
             <References Data={Data} i18={i18} type="soft" />

@@ -135,7 +135,7 @@ const Project = ({ Data, i18 }) => {
                             className={'z-shadow z-hover'}
                             data-aos="zoom-in"
                             data-aos-offset="10"
-                            bordered={true}
+                            variant="outlined"
                             cover={
                               <div style={{ opacity: '0.7' }}>
                                 <Image
@@ -183,17 +183,17 @@ const Project = ({ Data, i18 }) => {
                     (selectedCategory !== 'All' &&
                       project.categories.includes(selectedCategory)),
                 ).length > visible && (
-                  <Col span={24} style={{ textAlign: 'center', marginTop: 24 }}>
-                    <ReactiveButton
-                      idleText={
-                        <React.Fragment>
-                          {i18.BTN_LOAD_MORE} <BsArrowBarRight />
-                        </React.Fragment>
-                      }
-                      onClick={loadMore}
-                    />
-                  </Col>
-                )}
+                    <Col span={24} style={{ textAlign: 'center', marginTop: 24 }}>
+                      <ReactiveButton
+                        idleText={
+                          <React.Fragment>
+                            {i18.BTN_LOAD_MORE} <BsArrowBarRight />
+                          </React.Fragment>
+                        }
+                        onClick={loadMore}
+                      />
+                    </Col>
+                  )}
               </Row>
             </Col>
           </Row>

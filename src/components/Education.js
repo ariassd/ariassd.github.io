@@ -58,7 +58,7 @@ const Education = ({ Data, i18 }) => {
         <Col span={24}>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
-            href="javascript:void(0)"
+            href="#"
             onClick={() => {
               setSelectedCertificate(item);
               setModalVisible(true);
@@ -96,7 +96,7 @@ const Education = ({ Data, i18 }) => {
                 loading={loading}
                 style={{ cursor: 'default' }}
                 hoverable
-                bordered={true}
+                variant="outlined"
                 className="z-shadow"
                 data-aos="zoom-in"
                 data-aos-offset="10"

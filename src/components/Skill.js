@@ -48,7 +48,7 @@ const Skill = ({ Data, i18 }) => {
                         style={{ textAlign: 'center', cursor: 'default' }}
                         className="z-shadow z-hover"
                         data-aos="zoom-in"
-                        bordered={true}
+                        variant="outlined"
                       >
                         <Space direction="vertical">
                           <div>
@@ -112,7 +112,7 @@ const Skill = ({ Data, i18 }) => {
                         style={{ textAlign: 'center', cursor: 'default' }}
                         className="z-shadow z-hover"
                         data-aos="zoom-in"
-                        bordered={true}
+                        variant="outlined"
                       >
                         <Space direction="vertical">
                           <div>

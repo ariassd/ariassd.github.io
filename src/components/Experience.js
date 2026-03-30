@@ -81,7 +81,7 @@ const Experience = ({ Data, i18 }) => {
                 loading={loading}
                 style={{ cursor: 'default' }}
                 hoverable
-                bordered={true}
+                variant="outlined"
                 className="z-shadow"
               >
                 <Timeline
