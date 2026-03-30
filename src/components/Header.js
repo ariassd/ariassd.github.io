@@ -97,7 +97,7 @@ const Header = ({ Data, i18, OnLanguageChange }) => {
                   <li className="nav-item">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a
-                      href="javascript:void(0)"
+                      href="#"
                       className="nav-link smooth-scroll"
                       onClick={() => changeLanguage()}
                     >
@@ -106,8 +106,9 @@ const Header = ({ Data, i18, OnLanguageChange }) => {
                   </li>
 
                   <li className="nav-item pl-lg-5 theme-picker-wrapper d-none d-lg-block">
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a
-                      href="/#"
+                      href="#"
                       className="nav-link"
                       onClick={(e) => {
                         e.preventDefault();

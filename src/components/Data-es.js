@@ -13,6 +13,7 @@ import {
   FaFont,
 } from 'react-icons/fa';
 import { SiNestjs, SiConfluence } from 'react-icons/si';
+import { HiChatAlt2 } from 'react-icons/hi';
 import { DiScrum, DiJira } from 'react-icons/di';
 import { GiArcheryTarget, GiOpenBook, GiCompass } from 'react-icons/gi';
 import { FaHandsHoldingChild, FaBinoculars } from 'react-icons/fa6';
@@ -70,49 +71,31 @@ const about = {
   details: (
     <React.Fragment>
       <p>
-        Soy un profesional full-stack desde 2008. Realmente me gusta buscar la
-        perfección en todo lo que hago.
+        Soy un Ingeniero Full-Stack Senior y Engineering Manager con más de 15 años de experiencia desarrollando soluciones de software escalables. Me especializo en desarrollo backend con Node.js y TypeScript, con un fuerte enfoque en diseño de sistemas, rendimiento y mantenibilidad.
       </p>
+
       <ul>
-        <li>✓ Liderazgo.</li>
-        <li>✓ Mentoría.</li>
-        <li>✓ Automatización de procesos.</li>
-        <li>✓ Desarrollador Full-stack.</li>
-        <li>✓ NodeJS, NestJS, React, Angular</li>
-        <li>✓ Framework .NET (C#, VB)</li>
-        <li>✓ Typescript, javascript, jQuery</li>
-        <li>✓ Bases de datos (SQL, Mysql, PostgreSQL, MongoDB, sqlite)</li>
-        <li>✓ Otros como PHP, Python.</li>
+        <li>✓ Liderazgo técnico y gestión de equipos</li>
+        <li>✓ Mentoría y desarrollo de talento</li>
+        <li>✓ Automatización y optimización de procesos</li>
+        <li>✓ Arquitectura backend (Node.js, NestJS)</li>
+        <li>✓ Desarrollo frontend (React, Angular)</li>
+        <li>✓ Ecosistema .NET (C#, VB)</li>
+        <li>✓ Bases de datos: PostgreSQL, MySQL, MongoDB</li>
+        <li>✓ Cloud, CI/CD y sistemas distribuidos</li>
       </ul>
 
       <p>
-        He estado creando, diseñando, corrigiendo y editando software durante
-        más de {getExperienceDurationNumber()}+ años. Actualmente, soy parte del
-        equipo de liderazgo y estoy trabajando con tecnologías de vanguardia en
-        una empresa innovadora con centro de operaciones en Costa Rica, que
-        forma parte de una gran compañía ubicada en Suiza.
+        A lo largo de mi carrera, he diseñado e implementado sistemas escalables, procesos de automatización y aplicaciones críticas para el negocio en múltiples industrias. Disfruto resolver problemas complejos y transformarlos en soluciones simples, eficientes y fáciles de mantener.
       </p>
 
       <p>
-        He creado, desarrollado e implementado muchos procesos de
-        automatización, aplicaciones, sitios web, documentos de Excel y hojas de
-        cálculo de Google utilizando scripts a medida.
+        Actualmente formo parte del equipo de liderazgo en una empresa internacional, trabajando con tecnologías modernas y contribuyendo a proyectos de alto impacto en un entorno global.
       </p>
 
       <p>
-        Me especializo en crear soluciones simples para problemas complejos y
-        tengo una verdadera habilidad para hacer que mi software sea fácil de
-        operar, añadiendo configuraciones y documentación útil también. Estoy
-        convencido de que una solución bien diseñada no solo se verá mucho
-        mejor, sino que será mucho más fácil de entender y operar.
+        Me apasiona construir software confiable, mejorar procesos de desarrollo y ayudar a los equipos a entregar productos de alta calidad.
       </p>
-
-      <p>
-        He trabajado con clientes de todo el mundo. No tengo problemas para
-        hacer negocios con cualquier ubicación. Puedo ayudarte a desarrollar o
-        mejorar software para tu negocio.
-      </p>
-      <p></p>
     </React.Fragment>
   ),
   languages: [
@@ -128,6 +111,13 @@ const about = {
 };
 
 const skills = [
+  {
+    type: 'soft',
+    title: 'Communicación',
+    iconColor: '#7B68EE',
+    icon: <HiChatAlt2 />,
+    skillQualification: 10,
+  },
   {
     type: 'soft',
     title: 'Liderazgo',
@@ -311,7 +301,7 @@ const projects = [
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [
       process.env.PUBLIC_URL +
-        '/assets/img/projects/easy-portforward/screenshot.png',
+      '/assets/img/projects/easy-portforward/screenshot.png',
     ],
     icon: <SiNpm />,
     skills: [
@@ -369,13 +359,6 @@ const projects = [
           Techoryze ofrece el soporte de aprendizaje en tiempo real necesario
           para que los educadores aceleren el uso de la tecnología en el aula.
         </p>
-        <p>
-          Techoryze se fundó para resolver un problema sencillo: hacer que la
-          tecnología sea más accesible para los educadores. Más del 80% cree que
-          no reciben suficiente desarrollo profesional en tecnología. Esto
-          limita su capacidad para integrar la tecnología en su currículo y para
-          apoyar a sus estudiantes a convertirse en más expertos en tecnología.
-        </p>
       </React.Fragment>
     ),
     links: [
@@ -415,41 +398,6 @@ const projects = [
       {
         title: 'NPM',
         url: 'https://www.npmjs.com/package/easy-csv2json',
-      },
-    ],
-  },
-  {
-    title: 'Easy ws api proxy',
-    thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
-    images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
-    icon: <SiNpm />,
-    skills: [
-      {
-        title: 'Typescript.js',
-        color: '#31B2FB',
-      },
-      {
-        title: 'Node.js',
-        color: '#5C9553',
-      },
-    ],
-    categories: ['Librería'],
-    description: (
-      <React.Fragment>
-        Este utilitario te ayudará a enviar solicitudes a socket.io utilizando
-        una API REST simple. Es útil para propósitos de desarrollo, ya que con
-        esta herramienta puedes enviar solicitudes de socket.io desde Postman o
-        herramientas similares y obtener el resultado.
-      </React.Fragment>
-    ),
-    links: [
-      {
-        title: 'Homepage',
-        url: 'github.com/ariassd/easy-wsapiproxy',
-      },
-      {
-        title: 'NPM',
-        url: 'https://www.npmjs.com/package/easy-wsapiproxy',
       },
     ],
   },
@@ -741,15 +689,15 @@ const experiences = [
   {
     company: 'Gamanza Costa Rica',
     from: '2021',
-    to: 'present',
-    position: 'Lider de equipo',
+    to: '2026',
+    position: 'Desarrollador Backend | Lider de equipo',
     responsibilities: [
       '✓ Gestión de equipos',
       '✓ Proceso de toma de decisiones',
       '✓ Arquitectura de software',
       '✓ Implementación del sistema de gamificación Gamanza',
       '✓ Implementación del sistema CRM Gamanza',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit, Redis',
     ],
   },
   {
@@ -811,7 +759,7 @@ const education = [
     to: '2019',
     degree: 'Ingles conversasional, Level 12 ( level: 60% )',
     category: 'Languages',
-    info: [
+    certificate: [
       {
         title: 'TOEIC',
         value: 'B1',
@@ -825,7 +773,7 @@ const education = [
     to: '2015',
     degree: 'Certificación en HTML5, CSS, Javascript and MVC.net',
     category: 'Technical',
-    info: [
+    certificate: [
       {
         title: 'Certificado',
         value: 'Conclusión',
@@ -839,7 +787,7 @@ const education = [
     to: '2009',
     degree: 'Certificación en XML with Visual Studio',
     category: 'Technical',
-    info: [
+    certificate: [
       {
         title: 'Certificado',
         value: 'Conclusión',
@@ -867,7 +815,7 @@ const education = [
     to: '2002',
     degree: 'Estudios secundarios',
     category: 'Colegio',
-    info: [
+    certificate: [
       {
         title: 'Certificado',
         value: 'Conclusión',
@@ -881,7 +829,7 @@ const education = [
     to: '1996',
     degree: 'Escuela primaria',
     category: 'Escuela',
-    info: [
+    certificate: [
       {
         title: 'Certificado',
         value: 'Conclusión',
@@ -891,58 +839,6 @@ const education = [
   },
 ];
 
-const references = [
-  {
-    name: 'Leonardo Monge',
-    contact: '+506 8706-8185',
-    position: 'Engineer Manager @ Gamanza Costa Rica',
-    from: 2022,
-    to: 'current',
-    company: 'Gamanza Engage',
-    relationShip:
-      'Trabajé codo a codo con Leonardo tomando decisiones, planificando y apoyando la plataforma de gamificación para Gamanza.',
-  },
-  {
-    name: 'Evans García Sánchez',
-    contact: '+506 8740-0111',
-    position: 'Project Manager @ Creative Drive',
-    from: 2020,
-    to: 2020,
-    company: 'Creative Drive',
-    relationShip:
-      'Trabajé con Evans en Creative Drive y reporté el estado de los problemas, cambios y avances del sistema.',
-  },
-  {
-    name: 'Orlando Solano',
-    contact: '+506 8730-2461',
-    position: 'Project Manager @ Grupo LAFISE San José CR',
-    from: 2008,
-    to: 2017,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'En primer lugar, trabajé junto con Orlando en el Departamento de Banca en línea, más tarde Orlando tomo un puesto de lider del equipo',
-  },
-  {
-    name: 'Lisette Ureña Porras',
-    contact: '+506 8386-0430',
-    position: 'Teacher @ UNED',
-    from: 2008,
-    to: 2015,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'Lisette era compañera de trabajo en un departamento diferente en BCT, trabajé codo con codo con ella integrando los sistemas bancarios y centrales en línea',
-  },
-  {
-    name: 'Marco Campos Quesada',
-    contact: '+506 8371-7988',
-    position: 'Project Manager, Scrum master @ IBM',
-    from: 2008,
-    to: 2010,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'Marco Campos fue el gerente del departamento de banca en línea, trabajé con Marco manteniendo dicho sistema',
-  },
-];
 
 const DataEs = {
   defaultThemeColor,
@@ -952,7 +848,6 @@ const DataEs = {
   experiences,
   education,
   getExperienceDuration,
-  references,
 };
 
 export default DataEs;

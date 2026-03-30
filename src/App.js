@@ -5,16 +5,10 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom';
-import About from './components/About';
-import Contact from './components/Contact';
-import Education from './components/Education';
-import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Profile from './components/Profile';
-import Project from './components/Project';
 import Printable from './components/Printable/Printable';
-import Skill from './components/Skill';
+import LandingPage from './components/LandingPage';
 import { ThemeContext } from './contexts/ThemeContext';
 import 'antd/dist/reset.css';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
@@ -112,20 +106,6 @@ const AppContent = () => {
       </div>
 
       {showHeaderFooter && <Footer Data={data} i18={i18} />}
-    </React.Fragment>
-  );
-};
-
-const LandingPage = ({ Data, i18 }) => {
-  return (
-    <React.Fragment>
-      <Profile Data={Data} i18={i18} />
-      <About Data={Data} i18={i18} />
-      <Skill Data={Data} i18={i18} />
-      <Experience Data={Data} i18={i18} />
-      <Education Data={Data} i18={i18} />
-      <Project Data={Data} i18={i18} />
-      <Contact Data={Data} i18={i18} />
     </React.Fragment>
   );
 };

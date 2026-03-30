@@ -16,7 +16,7 @@ const Profile = ({ Data, i18 }) => {
               className="page-header-image"
               data-parallax="true"
               style={{
-                backgroundImage: "url('assets/img/frog2.png')",
+                backgroundImage: "url('assets/img/banner.png')",
               }}
             ></div>
             <div className="container">
@@ -25,7 +25,7 @@ const Profile = ({ Data, i18 }) => {
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a href="#">
                     <Image
-                      src={`assets/img/LuisArias.jpeg`}
+                      src={`assets/img/avatar.png`}
                       style={{
                         width: '100%',
                         maxWidth: '180px',
@@ -90,7 +90,7 @@ const Profile = ({ Data, i18 }) => {
                       idleText={i18.LBL_CV}
                       className="mt-4"
                       onClick={() => {
-                        navigate('/print?f=pdf');
+                        navigate('/print');
                       }}
                     />
                   </div>

@@ -50,7 +50,7 @@ const Education = ({ Data, i18 }) => {
                       <List
                         size="small"
                         split={false}
-                        dataSource={item.info}
+                        dataSource={item.certificate}
                         renderItem={(subItem) =>
                           subItem.title && subItem.value ? (
                             <List.Item>
@@ -61,7 +61,7 @@ const Education = ({ Data, i18 }) => {
                                 {subItem.value}
                               </Typography.Text>
                             </List.Item>
-                          ) : null
+                          ) : ' '
                         }
                       />
                     </Col>

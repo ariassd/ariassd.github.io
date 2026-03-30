@@ -13,6 +13,7 @@ import {
   FaFont,
 } from 'react-icons/fa';
 import { SiNestjs, SiConfluence } from 'react-icons/si';
+import { HiChatAlt2 } from 'react-icons/hi';
 import { DiScrum, DiJira } from 'react-icons/di';
 import { GiArcheryTarget, GiOpenBook, GiCompass } from 'react-icons/gi';
 import { FaHandsHoldingChild, FaBinoculars } from 'react-icons/fa6';
@@ -69,45 +70,31 @@ const about = {
   details: (
     <React.Fragment>
       <p>
-        I&apos;m a professional full-stack since 2008 I really like looking for
-        perfection in everything I do.
+        I am a Senior Full-Stack Engineer and Engineering Manager with {getExperienceDurationNumber()}+ years of experience building scalable software solutions. I specialize in backend development using Node.js and TypeScript, with a strong focus on system design, performance, and maintainability.
       </p>
+
       <ul>
-        <li>✓ Leadership.</li>
-        <li>✓ Mentoring.</li>
-        <li>✓ Process automation.</li>
-        <li>✓ Full-stack developer.</li>
-        <li>✓ NodeJS, NestJS, React, Angular</li>
-        <li>✓ Framework .NET (C#, VB)</li>
-        <li>✓ Typescript, javascript, jQuery</li>
-        <li>✓ Database (SQL, Mysql, PostgreSQL, MongoDB, sqlite)</li>
-        <li>✓ Others like PHP, Python.</li>
+        <li>✓ Technical leadership and team management</li>
+        <li>✓ Mentoring and developer growth</li>
+        <li>✓ Process automation and optimization</li>
+        <li>✓ Backend architecture (Node.js, NestJS)</li>
+        <li>✓ Frontend development (React, Angular)</li>
+        <li>✓ .NET ecosystem (C#, VB)</li>
+        <li>✓ Databases: PostgreSQL, MySQL, MongoDB</li>
+        <li>✓ Cloud, CI/CD, and distributed systems</li>
       </ul>
+
       <p>
-        I have been creating, designing, fixing and editing software over{' '}
-        {getExperienceDurationNumber()}+ years, Nowadays I am part of the
-        leadership team and I&apos;m working with cutting edge technologies in a
-        innovative company with operations center in Costa Rica, which is part
-        of a big company located in Switzerland.
+        Throughout my career, I have designed and implemented scalable systems, automation processes, and business-critical applications across multiple industries. I enjoy solving complex problems and transforming them into simple, efficient, and maintainable solutions.
       </p>
+
       <p>
-        I have created, developed and implement lot of automation processes,
-        applications, web sites, excel documents and google spreadsheet using
-        tailored scripting.
+        Currently, I am part of the leadership team at an international company, working with modern technologies and contributing to high-impact projects in a global environment.
       </p>
+
       <p>
-        I specialize in creating simple solutions to complex problems and I have
-        a real skill for making my software easy to operate adding
-        configurations and useful documentation too. I believe a well designed
-        solution will not only look a lot nicer but will be much easier to
-        understand and operate.
+        I am passionate about building reliable software, improving development processes, and helping teams deliver high-quality products.
       </p>
-      <p>
-        I have worked with clients around the world. I have no problem doing
-        business with any location. I can help you to develop or improve
-        software for your business.
-      </p>
-      <p></p>
     </React.Fragment>
   ),
   languages: [
@@ -123,6 +110,13 @@ const about = {
 };
 
 const skills = [
+  {
+    type: 'soft',
+    title: 'Communication',
+    iconColor: '#7B68EE',
+    icon: <HiChatAlt2 />,
+    skillQualification: 10,
+  },
   {
     type: 'soft',
     title: 'Leadership',
@@ -307,7 +301,7 @@ const projects = [
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [
       process.env.PUBLIC_URL +
-        '/assets/img/projects/easy-portforward/screenshot.png',
+      '/assets/img/projects/easy-portforward/screenshot.png',
     ],
     icon: <SiNpm />,
     skills: [
@@ -364,13 +358,6 @@ const projects = [
           Techoryze Delivers the Real-Time Learning Support Needed by Educators
           to Accelerate Technology Use in the Classroom
         </p>
-        <p>
-          Techoryze was started to solve a simple problem: to make technology
-          easier for educators. More than 80% think they don&apos;t get enough
-          technology professional development. This limits their ability to
-          integrate technology into their curriculum, and to support their
-          students in becoming more tech-savvy.
-        </p>
       </React.Fragment>
     ),
     links: [
@@ -410,40 +397,6 @@ const projects = [
       {
         title: 'NPM',
         url: 'https://www.npmjs.com/package/easy-csv2json',
-      },
-    ],
-  },
-  {
-    title: 'Easy ws api proxy',
-    thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
-    images: [process.env.PUBLIC_URL + '/assets/img/npm.jpeg'],
-    icon: <SiNpm />,
-    skills: [
-      {
-        title: 'Typescript.js',
-        color: '#31B2FB',
-      },
-      {
-        title: 'Node.js',
-        color: '#5C9553',
-      },
-    ],
-    categories: ['Package'],
-    description: (
-      <React.Fragment>
-        This package will help you to send requests to socket.io using a simple
-        API rest. Useful for development proposes, using this tool you can send
-        socket.io requests from postman or similar tools and get the result
-      </React.Fragment>
-    ),
-    links: [
-      {
-        title: 'Homepage',
-        url: 'github.com/ariassd/easy-wsapiproxy',
-      },
-      {
-        title: 'NPM',
-        url: 'https://www.npmjs.com/package/easy-wsapiproxy',
       },
     ],
   },
@@ -733,15 +686,15 @@ const experiences = [
   {
     company: 'Gamanza Costa Rica',
     from: '2021',
-    to: 'today',
-    position: 'Leadership',
+    to: '2026',
+    position: 'Backend developer | Leadership',
     responsibilities: [
       '✓ Team management',
       '✓ Decision making process',
       '✓ Software architecture',
       '✓ Gamanza Gamification system implementation',
       '✓ Gamanza CRM system implementation',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit, Redis',
     ],
   },
   {
@@ -883,59 +836,6 @@ const education = [
   },
 ];
 
-const references = [
-  {
-    name: 'Leonardo Monge',
-    contact: '+506 8706-8185',
-    position: 'Engineer Manager @ Gamanza Costa Rica',
-    from: 2022,
-    to: 'current',
-    company: 'Gamanza Engage',
-    relationShip:
-      'I worked side by side with Leonardo making decisions, planning and supporting the gamification platform for Gamanza',
-  },
-  {
-    name: 'Evans García Sánchez',
-    contact: '+506 8740-0111',
-    position: 'Project Manager @ Creative Drive',
-    from: 2020,
-    to: 2020,
-    company: 'Creative Drive',
-    relationShip:
-      'I Worked with Evans in Creative Drive and I reported the status of issues, changes and advance of the system',
-  },
-  {
-    name: 'Orlando Solano',
-    contact: '+506 8730-2461',
-    position: 'Project Manager @ Grupo LAFISE San José CR',
-    from: 2008,
-    to: 2017,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'Firstly I worked side by side with Orlando in the department of Online Banking, later Orlando become a manager',
-  },
-  {
-    name: 'Lisette Ureña Porras',
-    contact: '+506 8386-0430',
-    position: 'Teacher @ UNED',
-    from: 2008,
-    to: 2015,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'Lisette was a coworker on different department in BCT, I worked side by side with her integrating the online banking and core systems',
-  },
-  {
-    name: 'Marco Campos Quesada',
-    contact: '+506 8371-7988',
-    position: 'Project Manager, Scrum master @ IBM',
-    from: 2008,
-    to: 2010,
-    company: 'Banco BCT S.A',
-    relationShip:
-      'Marco Campos was the manager of the Online Banking department, I worked with Marco maintaining such system',
-  },
-];
-
 const DataEn = {
   defaultThemeColor,
   about,
@@ -944,7 +844,6 @@ const DataEn = {
   experiences,
   education,
   getExperienceDuration,
-  references,
 };
 
 export default DataEn;

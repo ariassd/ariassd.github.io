@@ -20,7 +20,7 @@ const About = ({ Data }) => {
             loading={loading}
             style={{ cursor: 'default' }}
             hoverable
-            bordered={false}
+            variant="borderless"
             className="z-shadow"
             data-aos="zoom-in"
             data-aos-offset="10"

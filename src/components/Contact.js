@@ -30,7 +30,7 @@ const Contact = ({ Data, i18 }) => {
                 <Card
                   style={{ cursor: 'default' }}
                   hoverable
-                  bordered={true}
+                  variant='outlined'
                   className="z-shadow"
                   data-aos="zoom-in"
                   data-aos-offset="10"

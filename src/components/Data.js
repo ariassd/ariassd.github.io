@@ -9,7 +9,7 @@ import { ImMail4 } from 'react-icons/im';
 const aboutData = {
   name: 'Luis Arias',
   phone: '+506-xxxx-xx83',
-  email: 'arxxxxx@gmail.com',
+  email: 'ariassd@gmail.com',
   address: 'Santa Bárbara, Heredia, CR',
   university: 'Universidad Nacional de Costa Rica',
   github: 'https://github.com/ariassd',
@@ -49,6 +49,34 @@ const socialLinks = [
   },
 ];
 
+const references = [
+  {
+    name: 'Gamanza Engage',
+    contact: 'https://www.gamanzaengage.com/',
+    position: 'NodeJS Backend Developer | Gamification and CRM',
+    from: 2022,
+    to: 2026,
+    company: 'Gamanza Engage',
+  },
+  {
+    name: 'Creative Drive',
+    contact: 'https://www.linkedin.com/company/wearecd',
+    position: 'C# Backend Developer | Procomer VUI',
+    from: 2020,
+    to: 2020,
+    company: 'Creative Drive',
+  },
+  {
+    name: 'Banco BCT S.A',
+    contact: 'https://www.bancobct.com/',
+    position: 'Fullstack | Online banking',
+    from: 2008,
+    to: 2015,
+    company: 'Banco BCT S.A'
+  },
+];
+
+
 if (aboutData.hideEmail == false) {
   socialLinks.push({
     title: 'email',
@@ -57,6 +85,8 @@ if (aboutData.hideEmail == false) {
   });
 }
 
+DataEn.references = references;
+DataEs.references = references;
 DataEn.about = { ...DataEn.about, ...aboutData };
 DataEs.about = { ...DataEs.about, ...aboutData };
 DataEn.socialLinks = socialLinks;
