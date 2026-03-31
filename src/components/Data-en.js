@@ -11,6 +11,7 @@ import {
   FaBalanceScaleRight,
   FaGraduationCap,
   FaFont,
+  FaCss3Alt
 } from 'react-icons/fa';
 import { SiNestjs, SiConfluence } from 'react-icons/si';
 import { HiChatAlt2 } from 'react-icons/hi';
@@ -21,7 +22,6 @@ import { LuBrainCircuit } from 'react-icons/lu';
 import { TbClockDollar, TbBrandCSharp } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
 import {
-  SiCss3,
   SiJavascript,
   SiJquery,
   SiMongodb,
@@ -284,7 +284,7 @@ const skills = [
     title: 'CSS',
     iconColor: '#2862E9',
     skillQualification: 6,
-    icon: <SiCss3 />,
+    icon: <FaCss3Alt />,
   },
   {
     type: 'hard',

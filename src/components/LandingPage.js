@@ -18,16 +18,7 @@ const LandingPage = ({ Data, i18 }) => {
   };
 
   useEffect(() => {
-    const isMobile =
-      /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent,
-      );
-    if (isMobile == false) {
-      window.addEventListener('beforeprint', onBeforePrint);
-    } else {
-      window.print();
-    }
-
+    window.addEventListener('beforeprint', onBeforePrint);
   }, []);
 
   return (
