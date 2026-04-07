@@ -89,10 +89,6 @@ const about = {
       </p>
 
       <p>
-        Currently, I am part of the leadership team at an international company, working with modern technologies and contributing to high-impact projects in a global environment.
-      </p>
-
-      <p>
         I am passionate about building reliable software, improving development processes, and helping teams deliver high-quality products.
       </p>
     </React.Fragment>

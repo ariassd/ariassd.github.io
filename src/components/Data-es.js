@@ -90,10 +90,6 @@ const about = {
       </p>
 
       <p>
-        Actualmente formo parte del equipo de liderazgo en una empresa internacional, trabajando con tecnologías modernas y contribuyendo a proyectos de alto impacto en un entorno global.
-      </p>
-
-      <p>
         Me apasiona construir software confiable, mejorar procesos de desarrollo y ayudar a los equipos a entregar productos de alta calidad.
       </p>
     </React.Fragment>
