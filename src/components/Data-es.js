@@ -101,8 +101,8 @@ const about = {
   taglines: [
     'Desarrollador full stack',
     'Desarrollador web',
-    'Gestion de equipos',
     'Arquitectura de software',
+    'Freelance',
   ],
 };
 

@@ -187,7 +187,7 @@ const Contact = ({ Data, i18 }) => {
                                 }
                                 className="mt-4"
                                 onClick={() => {
-                                  navigate('/print?f=pdf');
+                                  navigate('/print');
                                 }}
                               />
                             </div>

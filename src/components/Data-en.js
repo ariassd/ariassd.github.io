@@ -100,8 +100,8 @@ const about = {
   taglines: [
     'Full stack developer',
     'Web application developer',
-    'Engineer manager',
     'Software architecture',
+    'Freelance'
   ],
 };
 
