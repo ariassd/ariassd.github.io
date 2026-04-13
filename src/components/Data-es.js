@@ -683,17 +683,40 @@ const projects = [
 
 const experiences = [
   {
+    company: 'Freelance / Independiente',
+    from: '2026',
+    to: 'present',
+    position: 'Full-Stack Engineer / Backend Specialist',
+    responsibilities: [
+      'Gestión de Sistemas e Información: Experto en el mantenimiento y actualización de plataformas digitales, garantizando la disponibilidad del sistema y la precisión de los datos.',
+      'Soporte Operativo: Competente en la gestión de entornos digitales complejos y en la resolución de problemas en flujos de trabajo operativos.',
+      'Automatización de Procesos: Especialista en la optimización de tareas repetitivas e integración de herramientas digitales para mejorar la eficiencia organizacional.',
+      'Arquitectura de la Información: Capacidad para organizar, estructurar y mantener grandes conjuntos de datos para facilitar su recuperación y generación de informes.',
+      'Auditoría y Optimización de Bases de Datos: Experiencia en la auditoría de registros y optimización del almacenamiento de datos para asegurar que la información esté limpia, organizada y sea confiable.',
+      'Rendimiento y Exactitud: Comprometido con el procesamiento de datos a alta velocidad, manteniendo estrictos estándares de calidad y confiabilidad del sistema.',
+    ],
+    techStack: [
+      '​✓ Aplicaciones Full-stack: React, Angular, Wordpress',
+      '​✓ Diseño de API: RESTful services, microservices',
+      '​✓ Bases de datos: PostgreSQL, MongoDB, MySQL, SQLServer',
+      '​✓ Desarrollo backend: Node.js, NestJS, RabbitMQ, TypeScript, JavaScript, C#, .NET, Python, PHP'
+    ],
+  },
+  {
     company: 'Gamanza Costa Rica',
     from: '2021',
     to: '2026',
     position: 'Desarrollador Backend | Lider de equipo',
     responsibilities: [
-      '✓ Gestión de equipos',
-      '✓ Proceso de toma de decisiones',
-      '✓ Arquitectura de software',
-      '✓ Implementación del sistema de gamificación Gamanza',
-      '✓ Implementación del sistema CRM Gamanza',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit, Redis',
+      'Liderazgo de Equipo y Mentoría: Dirigí y brindé mentoría a equipos en la gestión de sistemas CRM y plataformas con alto volumen de datos, supervisando la toma de decisiones para arquitecturas operativas complejas.',
+      'Supervisión de Sistemas: Gestioné y brindé mantenimiento a sistemas de datos a gran escala, asegurando un 100% de precisión en el procesamiento de registros y la confiabilidad del sistema.',
+      'Automatización de Flujos de Trabajo: Optimice los flujos de trabajo administrativos y de ingreso de datos mediante la implementación de herramientas digitales automatizadas e integración de procesos.',
+      'Informes y Análisis: Generé informes operativos detallados y mantuve archivos digitales organizados para apoyar la toma de decisiones ejecutivas.',
+    ],
+    techStack: [
+      '✓ Sistemas del core: Gamanza Gamification & CRM Systems.',
+      '✓ Bases de datos: MongoDB, PostgreSQL, Redis.',
+      '✓ Desarrollo de Backend: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -702,8 +725,17 @@ const experiences = [
     to: '2021',
     position: 'Desarrollador Backend Senior',
     responsibilities: [
-      '✓ Implementación del sistema CRM de Gamanza',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      'Gestión de sistemas e información: Experto en el mantenimiento y la actualización de plataformas digitales, garantizando una alta disponibilidad del sistema y la precisión de los datos.',
+      'Soporte operativo: Competente en la gestión de entornos digitales complejos y en la resolución de problemas en los flujos de trabajo operativos.',
+      'Automatización de procesos: Especializado en la optimización de tareas repetitivas y la integración de herramientas digitales para mejorar la eficiencia organizativa.',
+      'Arquitectura de la información: Experto en la organización, estructuración y mantenimiento de grandes conjuntos de datos para facilitar su recuperación y la generación de informes.',
+      'Auditoría y optimización de bases de datos: Con experiencia en la auditoría de registros y la optimización del almacenamiento de datos para garantizar que la información sea limpia, organizada y fiable.',
+      'Rendimiento y precisión: Comprometido con el procesamiento de datos a alta velocidad, manteniendo al mismo tiempo estrictos estándares de calidad y la fiabilidad del sistema.',
+    ],
+    techStack: [
+      '✓ Sistemas del core: Gamanza CRM System.',
+      '✓ Bases de datos: MongoDB, PostgreSQL, Redis.',
+      '✓ Desarrollo de Backend: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -712,8 +744,14 @@ const experiences = [
     to: '2021',
     position: 'Desarrollador Full Stack (freelance)',
     responsibilities: [
-      '✓ Diseño e implementación de la plataforma Techoryze https://techoryze.com',
-      '✓ Typescript, NestJs, ReactJs, MongoDb',
+      'Gestión de sistemas e información: Experto en el mantenimiento y la actualización de plataformas digitales, garantizando una alta disponibilidad del sistema y la precisión de los datos.',
+      'Arquitectura de la información: Experto en la organización, estructuración y mantenimiento de grandes conjuntos de datos para facilitar su recuperación y la elaboración de informes.',
+      'Diseño e implementación de la plataforma Techoryze https://techoryze.com',
+    ],
+    techStack: [
+      '✓ Core System: Techoryze help desk design',
+      '✓ Database Management: MongoDB, PostgreSQL, Redis.',
+      '✓ Backend development: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -722,8 +760,16 @@ const experiences = [
     to: '2020',
     position: 'Desarrollador Backend Senior .NET',
     responsibilities: [
-      '✓ Desarrollar software para PROCOMER Costa Rica.',
-      '✓ C#, AppFabric, Microservicios, SQL Server, XML, Angular, jQuery, Mvc .NET',
+
+      'Auditoría de Registros: Responsable de la actualización y auditoría de registros institucionales dentro de las plataformas gubernamentales de PROCOMER.',
+      'Integridad de Datos: Garanticé la consistencia de los datos a través de múltiples bases de datos relacionales y sistemas de archivo digital utilizando SQL Server.',
+      'Soporte Operativo: Brindé soporte técnico y operativo en el manejo de datos para asegurar el correcto funcionamiento de los servicios institucionales.',
+      'Optimización de Archivos: Implementé mejoras en la organización de la información digital para facilitar su acceso y recuperación rápida.',
+    ],
+    techStack: [
+      '✓ Core System: VUE System PROCOMER Costa Rica.',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: C#, AppFabric, Microservices, SQL Server, XML, Angular, jQuery, Mvc .NET',
     ],
   },
   {
@@ -732,8 +778,15 @@ const experiences = [
     to: '2018',
     position: 'Desarrollador de software senior / arquitecto de software',
     responsibilities: [
-      '✓ Desarrollar, diseñar software, dar soporte, mejoras e integración continua del sistema bancario en línea.',
-      '✓ Tecnologías: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
+      'Soporte Operativo Crítico: Brindé soporte técnico y operativo para el sistema de banca en línea, priorizando la confiabilidad del servicio y la seguridad de la información.',
+      'Gestión de Datos Financieros: Realicé el ingreso y verificación de datos de alto volumen bajo los estrictos estándares de precisión de la industria bancaria.',
+      'Mantenimiento de Sistemas: Aseguré la integridad de los registros mediante el soporte continuo y la mejora de los sistemas de gestión interna.',
+      'Documentación y Calidad: Responsable de la auditoría y actualización constante de bases de datos relacionales para garantizar la exactitud de la información financiera.',
+    ],
+    techStack: [
+      '✓ Core System: Enl@ce on-line banking system.',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
     ],
   },
   {
@@ -742,13 +795,78 @@ const experiences = [
     to: '2008',
     position: 'Desarrollador de software',
     responsibilities: [
-      '✓ Desarrollo y mantenimiento de e-marketing en Costa Rica y México',
-      '✓ Tecnologías: CMS, SQL Server, C#, ASP, HTML',
+      'Limpieza y Migración de Datos: Realicé tareas extensas de limpieza (Data Cleaning) y validación de datos para la base de clientes de Roche dentro de la plataforma Siebel CRM.',
+      'Aseguramiento de la Calidad: Identifiqué y corregí inconsistencias, duplicados y errores en los registros de clientes para garantizar información de alta calidad en las campañas de mercadeo de Costa Rica y México.',
+      'Mantenimiento de Información: Gestioné y actualicé sistemas web de mercadeo electrónico, enfocado en la integridad de los datos y la confiabilidad del sistema.',
+      'Soporte Regional: Coordiné tareas de gestión de datos para cuentas internacionales, cumpliendo con estrictos estándares de precisión para clientes corporativos.',
+    ],
+    techStack: [
+      '✓ Core System: CMS',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: VB.NET, C#, HTML, Javascript, jQuery, MVC .NET, ASP',
     ],
   },
 ];
 
 const education = [
+  {
+    institution: 'Universidad Estatal a Distancia (UNED)',
+    from: '2026',
+    to: 'Presente',
+    degree: 'Diplomado en informática',
+    category: 'Universidad',
+    certificate: [
+      {
+        title: 'Diploma',
+        value: 'En curso',
+      },
+    ],
+    images: ['/assets/img/education/uned.png'],
+  },
+  {
+    institution: 'Udemy',
+    from: '2025',
+    to: '2025',
+    degree: 'Cursos de educación continua',
+    category: 'Tecnología',
+    certificate: [
+      {
+        title: 'Certificado',
+        value: 'Python Flask: Make Web Apps with Python',
+      },
+      {
+        title: 'Certificado',
+        value: 'Javscript Essentials for Node-RED',
+      },
+      {
+        title: 'Certificado',
+        value: 'Mastering C++ Programming for beginners',
+      },
+      {
+        title: 'Certificado',
+        value: 'Aprende Lenguaje C de CERO a EXPERTO',
+      },
+    ],
+    images: ['/assets/img/education/udemy.png'],
+  },
+  {
+    institution: 'Cisco Netacad',
+    from: '2025',
+    to: '2025',
+    degree: 'Cursos de educación continua',
+    category: 'Tecnología',
+    certificate: [
+      {
+        title: 'Certificado',
+        value: 'English for IT 1',
+      },
+      {
+        title: 'Certificado',
+        value: 'Introduction to data cience',
+      },
+    ],
+    images: ['/assets/img/education/cisco_netacad.png'],
+  },
   {
     institution: 'Centro Cultural de Idiomas',
     from: '2017',

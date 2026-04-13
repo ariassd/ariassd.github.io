@@ -680,17 +680,41 @@ const projects = [
 
 const experiences = [
   {
+    company: 'Freelance',
+    from: '2026',
+    to: 'present',
+    position: 'Full-Stack Engineer / Backend Specialist',
+    responsibilities: [
+      'Systems & Information Management: Expert in maintaining and updating digital platforms, ensuring high system availability and data accuracy.',
+      'Operational Support: Proficient in managing complex digital environments and troubleshooting operational workflows.',
+      'Process Automation: Specialized in streamlining repetitive tasks and integrating digital tools to improve organizational efficiency.',
+      'Information Architecture: Skilled in organizing, structuring, and maintaining large datasets for easy retrieval and reporting.',
+      'Database Auditing & Optimization: Experienced in auditing records and optimizing data storage to ensure information is clean, organized, and reliable.',
+      'Performance & Accuracy: Committed to high-speed data processing while maintaining strict quality standards and system reliability.',
+    ],
+    techStack: [
+      '​✓ Full-stack applications: React, Angular, Wordpress',
+      '​✓ API design: RESTful services, microservices',
+      '​✓ Database: PostgreSQL, MongoDB, MySQL, SQLServer',
+      '​✓ Backend development: Node.js, NestJS, RabbitMQ, TypeScript, JavaScript, C#, .NET, Python, PHP'
+    ],
+  },
+  {
     company: 'Gamanza Costa Rica',
     from: '2021',
     to: '2026',
     position: 'Backend developer | Leadership',
     responsibilities: [
-      '✓ Team management',
-      '✓ Decision making process',
-      '✓ Software architecture',
-      '✓ Gamanza Gamification system implementation',
-      '✓ Gamanza CRM system implementation',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit, Redis',
+      'Team Leadership & Mentoring: Led and mentored teams in the management of CRM and data-heavy systems, overseeing decision-making for complex operational architectures.',
+      'System Design Oversight: Responsible for the information architecture and structure of internal systems to ensure long-term data reliability and scalability.',
+      'System Oversight: Managed and maintained large-scale data systems, ensuring 100% accuracy in record processing and system reliability.',
+      'Workflow Automation: Streamlined data entry and administrative workflows through the implementation of automated digital tools and process integrations.',
+      'Reporting & Analysis: Generated detailed operational reports and maintained organized digital archives to support executive decision-making.'
+    ],
+    techStack: [
+      '✓ Core Systems: Gamanza Gamification & CRM Systems.',
+      '✓ Database Management: MongoDB, PostgreSQL, Redis.',
+      '✓ Backend development: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -699,8 +723,17 @@ const experiences = [
     to: '2021',
     position: 'Senior Back end developer',
     responsibilities: [
-      '✓ Gamanza CRM system implementation',
-      '✓ Typescript, NestJs, NodeJs, MongoDb, Postgre, Rabbit',
+      'Systems & Information Management: Expert in maintaining and updating digital platforms, ensuring high system availability and data accuracy.',
+      'Operational Support: Proficient in managing complex digital environments and troubleshooting operational workflows.',
+      'Process Automation: Specialized in streamlining repetitive tasks and integrating digital tools to improve organizational efficiency.',
+      'Information Architecture: Skilled in organizing, structuring, and maintaining large datasets for easy retrieval and reporting.',
+      'Database Auditing & Optimization: Experienced in auditing records and optimizing data storage to ensure information is clean, organized, and reliable.',
+      'Performance & Accuracy: Committed to high-speed data processing while maintaining strict quality standards and system reliability.',
+    ],
+    techStack: [
+      '✓ Core System: Gamanza CRM System.',
+      '✓ Database Management: MongoDB, PostgreSQL, Redis.',
+      '✓ Backend development: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -709,8 +742,14 @@ const experiences = [
     to: '2021',
     position: 'Full stack developer ( freelance )',
     responsibilities: [
-      '✓ Techoryze platform design and implementation https://techoryze.com',
-      '✓ Typescript, NestJs, ReactJs, MongoDb',
+      'Systems & Information Management: Expert in maintaining and updating digital platforms, ensuring high system availability and data accuracy.',
+      'Information Architecture: Skilled in organizing, structuring, and maintaining large datasets for easy retrieval and reporting.',
+      'Techoryze platform design and implementation https://techoryze.com',
+    ],
+    techStack: [
+      '✓ Core System: Techoryze help desk design',
+      '✓ Database Management: MongoDB, PostgreSQL, Redis.',
+      '✓ Backend development: Typescript, NodeJS, NestJS, RabbitMQ, Docker, CI/CD,',
     ],
   },
   {
@@ -719,8 +758,15 @@ const experiences = [
     to: '2020',
     position: 'Senior .NET Back end developer ',
     responsibilities: [
-      '✓ Develop software for PROCOMER Costa Rica.',
-      '✓ C#, AppFabric, Microservices, SQL Server, XML, Angular, jQuery, Mvc .NET',
+      'Records Auditing: Responsible for updating and auditing institutional records within PROCOMER\'s governmental platforms.',
+      'Data Integrity: Guaranteed data consistency across multiple relational databases and digital filing systems using SQL Server.',
+      'Operational Support: Provided technical and operational support in data management to ensure the correct functioning of institutional services.',
+      'Archive Optimization: Implemented improvements in digital information organization to facilitate quick access and retrieval.',
+    ],
+    techStack: [
+      '✓ Core System: VUE System PROCOMER Costa Rica.',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: C#, AppFabric, Microservices, SQL Server, XML, Angular, jQuery, Mvc .NET',
     ],
   },
   {
@@ -729,8 +775,15 @@ const experiences = [
     to: '2018',
     position: 'Senior Software engineer / software architect',
     responsibilities: [
-      '✓ Develop, software design, support, improvements and continuous integration of the on-line banking system.',
-      '✓ Technologies: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
+      'Critical Operational Support: Provided technical and operational support for the online banking system, prioritizing service reliability and information security.',
+      'Financial Data Management: Performed high-volume data entry and verification under the strict precision standards of the banking industry.',
+      'Systems Maintenance: Ensured record integrity through continuous support and improvements to internal management systems.',
+      'Documentation & Quality: Responsible for the auditing and constant updating of relational databases to guarantee the accuracy of financial information.',
+    ],
+    techStack: [
+      '✓ Core System: Enl@ce on-line banking system.',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: VB.NET, C#, SQL Server, XML, HTML, Javascript, jQuery, MVC .NET, iOS',
     ],
   },
   {
@@ -739,13 +792,78 @@ const experiences = [
     to: '2008',
     position: 'Software developer',
     responsibilities: [
-      '✓ Develop and maintenance of e-marketing in Costa Rica and Mexico',
-      '✓ Technologies: CMS, Sql Server, C#, ASP, HTML',
+      'Data Cleaning & Migration: Performed extensive data cleansing and validation for Roche client databases within the Siebel CRM platform.',
+      'Quality Assurance: Identified and corrected inconsistencies, duplicates, and errors in customer records to ensure high-quality information for marketing campaigns in Costa Rica and Mexico.',
+      'Information Maintenance: Managed and updated electronic marketing web systems, focusing on data integrity and system reliability.',
+      'Regional Support: Coordinated data management tasks for international accounts, meeting strict accuracy standards for corporate clients.',
+    ],
+    techStack: [
+      '✓ Core System: CMS',
+      '✓ Database Management: SQL Server',
+      '✓ Backend development: VB.NET, C#, HTML, Javascript, jQuery, MVC .NET, ASP',
     ],
   },
 ];
 
 const education = [
+  {
+    institution: 'Universidad Estatal a Distancia (UNED)',
+    from: '2026',
+    to: 'Present',
+    degree: 'Diploma in computer science',
+    category: 'University',
+    certificate: [
+      {
+        title: 'Diploma',
+        value: 'In Progress',
+      },
+    ],
+    images: ['/assets/img/education/uned.png'],
+  },
+  {
+    institution: 'Udemy',
+    from: '2025',
+    to: '2025',
+    degree: 'Continous education courses',
+    category: 'Technology',
+    certificate: [
+      {
+        title: 'Certificate',
+        value: 'Python Flask: Make Web Apps with Python',
+      },
+      {
+        title: 'Certificate',
+        value: 'Javscript Essentials for Node-RED',
+      },
+      {
+        title: 'Certificate',
+        value: 'Mastering C++ Programming for beginners',
+      },
+      {
+        title: 'Certificate',
+        value: 'Aprende Lenguaje C de CERO a EXPERTO',
+      },
+    ],
+    images: ['/assets/img/education/udemy.png'],
+  },
+  {
+    institution: 'Cisco Netacad',
+    from: '2025',
+    to: '2025',
+    degree: 'Continuing education course',
+    category: 'Technology',
+    certificate: [
+      {
+        title: 'Certificate',
+        value: 'English for IT 1',
+      },
+      {
+        title: 'Certificate',
+        value: 'Introduction to data cience',
+      },
+    ],
+    images: ['/assets/img/education/cisco_netacad.png'],
+  },
   {
     institution: 'Centro Cultural de Idiomas',
     from: '2017',
