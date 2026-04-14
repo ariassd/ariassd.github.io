@@ -8,13 +8,14 @@ export const I18_ES = {
 
   TIT_PAGE_TITLE: 'Curriculum vitae',
   TIT_ABOUT: 'Acerca de mi',
-  TIT_PROF_SKILLS: 'Habilidades profesionales',
+  TIT_PROF_SKILLS: 'Habilidades técnicas',
   TIT_SOFT_SKILLS: 'Habilidades blandas',
   TIT_EXPERIENCE: 'Experiencia laboral',
   TIT_EDUCATION: 'Educación',
   TIT_PORTFOLIO: 'Portafolio',
   TIT_CONTACT: 'Contáctame',
   TIT_REFERENCES: 'Referencias',
+  TIT_TECK_STACK: 'Perfil técnico',
   TIT_FOOTER: 'Quote',
 
   LBL_ALL: 'Todos',

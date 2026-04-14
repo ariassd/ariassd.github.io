@@ -6,6 +6,11 @@ import StyledContainer from './StyledContainer';
 
 const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
+  text-align: justify;
+`;
+const StyledListItemTeckStack = styled(List.Item)`
+  padding: 6px 16px !important;
+  text-align: left;
 `;
 
 const Experience = ({ Data, i18 }) => {
@@ -44,6 +49,26 @@ const Experience = ({ Data, i18 }) => {
                   {item}
                 </Typography.Text>
               </StyledListItem>
+            )}
+          />
+          <Typography.Title
+            level={5}
+            type="secondary"
+            style={{ textAlign: 'center' }}
+          >
+            {i18.TIT_TECK_STACK}
+          </Typography.Title>
+          <List
+            dir="lrl"
+            size="small"
+            split={false}
+            dataSource={experience.techStack}
+            renderItem={(item) => (
+              <StyledListItemTeckStack style={{ padding: '4px 16px' }}>
+                <Typography.Text style={{ fontSize: 12, color: 'gray' }}>
+                  {item}
+                </Typography.Text>
+              </StyledListItemTeckStack>
             )}
           />
         </Col>
