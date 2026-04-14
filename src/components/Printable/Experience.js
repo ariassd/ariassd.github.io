@@ -6,10 +6,11 @@ const StyledListItem = styled(List.Item)`
   padding: 6px 16px !important;
 `;
 
-const Experience = ({ Data, i18 }) => {
+const Experience = ({ Data, i18, pageNumber, size }) => {
   const experiences = Data.experiences;
+  const startFrom = (pageNumber - 1) * size;
 
-  const timelineItems = experiences.map((experience, index) => ({
+  const timelineItems = experiences.reverse().slice(startFrom, startFrom + size).map((experience, index) => ({
     children: (
       <Row>
         <Col span={24}>
@@ -27,6 +28,24 @@ const Experience = ({ Data, i18 }) => {
           <List
             split={false}
             dataSource={experience.responsibilities}
+            renderItem={(item) => (
+              <StyledListItem style={{ padding: '4px 16px' }}>
+                <Typography.Text style={{ fontSize: 12, color: 'gray' }}>
+                  {item}
+                </Typography.Text>
+              </StyledListItem>
+            )}
+          />
+          <Typography.Title
+            level={5}
+            type="secondary"
+            style={{ textAlign: 'center' }}
+          >
+            {i18.TIT_TECK_STACK}
+          </Typography.Title>
+          <List
+            split={false}
+            dataSource={experience.techStack}
             renderItem={(item) => (
               <StyledListItem style={{ padding: '4px 16px' }}>
                 <Typography.Text style={{ fontSize: 12, color: 'gray' }}>

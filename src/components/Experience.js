@@ -56,7 +56,7 @@ const Experience = ({ Data, i18 }) => {
             type="secondary"
             style={{ textAlign: 'center' }}
           >
-            Technical stack
+            {i18.TIT_TECK_STACK}
           </Typography.Title>
           <List
             dir="lrl"

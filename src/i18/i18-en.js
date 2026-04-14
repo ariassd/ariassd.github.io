@@ -8,13 +8,14 @@ export const I18_EN = {
 
   TIT_PAGE_TITLE: 'Resume',
   TIT_ABOUT: 'About me',
-  TIT_PROF_SKILLS: 'Professional Skills',
+  TIT_PROF_SKILLS: 'Technical Skills',
   TIT_SOFT_SKILLS: 'Soft Skills',
   TIT_EXPERIENCE: 'Work experience',
   TIT_EDUCATION: 'Education',
   TIT_PORTFOLIO: 'Portfolio',
   TIT_CONTACT: 'Contact me',
   TIT_REFERENCES: 'References',
+  TIT_TECK_STACK: 'Technical Profile',
   TIT_FOOTER: 'Quote',
 
   LBL_ALL: 'All',

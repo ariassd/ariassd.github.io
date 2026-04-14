@@ -73,7 +73,7 @@ const Printable = ({ Data, i18 }) => {
       <div
         className="section"
         id="printable"
-        style={{ maxWidth: '900', margin: 'auto' }}
+        style={{ maxWidth: '1060px', margin: 'auto' }}
       >
         <Row>
           <Col span={6}>
@@ -130,17 +130,17 @@ const Printable = ({ Data, i18 }) => {
         <Row>
           <Col span={12} style={cssPageColumn}>
             <About Data={Data} i18={i18} />
-            <Education Data={Data} i18={i18} />
           </Col>
           <Col span={12} style={cssPageColumn}>
-            <Experience Data={Data} i18={i18} />
+            <Skills Data={Data} i18={i18} type="soft" />
           </Col>
         </Row>
+
         {/* Page number 2 */}
         <div style={{ breakAfter: 'page' }}></div>
         <Row>
           <Col span={24} style={cssPageColumn}>
-            <Skills Data={Data} i18={i18} type="soft" />
+            <Education Data={Data} i18={i18} />
           </Col>
         </Row>
         <Row>
@@ -150,6 +150,30 @@ const Printable = ({ Data, i18 }) => {
         </Row>
 
         {/* Page number 3 */}
+        <div style={{ breakAfter: 'page' }}></div>
+        <Row>
+          <Col span={24} style={cssPageColumn}>
+            <Experience Data={Data} i18={i18} pageNumber={1} size={3} />
+          </Col>
+        </Row>
+
+        {/* Page number 4 */}
+        <div style={{ breakAfter: 'page' }}></div>
+        <Row>
+          <Col span={24} style={cssPageColumn}>
+            <Experience Data={Data} i18={i18} pageNumber={2} size={3} />
+          </Col>
+        </Row>
+
+        {/* Page number 5 */}
+        <div style={{ breakAfter: 'page' }}></div>
+        <Row>
+          <Col span={24} style={cssPageColumn}>
+            <Experience Data={Data} i18={i18} pageNumber={3} size={3} />
+          </Col>
+        </Row>
+
+        {/* Page number 6 */}
         <div style={{ breakAfter: 'page' }}></div>
         <Row>
           <Col span={24} style={cssPageColumn}>
