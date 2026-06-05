@@ -293,6 +293,46 @@ const skills = [
 
 const projects = [
   {
+    title: 'Expenses NestJS Micro service',
+    thumbnail: process.env.PUBLIC_URL + '/assets/img/nestjs.png',
+    images: [process.env.PUBLIC_URL + '/assets/img/nestjs.png'],
+    icon: <SiNestjs />,
+    skills: [
+      {
+        title: 'NestJS',
+        color: '#f1a900',
+      },
+      {
+        title: 'Postgre',
+        color: '#e66699',
+      },
+      {
+        title: 'Api Rest',
+        color: '#17572d',
+      },
+      {
+        title: 'CI/CD',
+        color: '#31B2FB',
+      },
+      {
+        title: 'Node.js',
+        color: '#5C9553',
+      },
+    ],
+    categories: ['Package'],
+    description: (
+      <React.Fragment>
+        A RESTful microservice for managing expenses, built with NestJS, TypeORM, and PostgreSQL. This service provides CRUD operations for expense records with filtering, pagination, and status management capabilities.
+      </React.Fragment>
+    ),
+    links: [
+      {
+        title: 'Homepage',
+        url: 'https://github.com/ariassd/expenses-njs',
+      },
+    ],
+  },
+  {
     title: 'Easy Portforward',
     thumbnail: process.env.PUBLIC_URL + '/assets/img/npm.jpeg',
     images: [

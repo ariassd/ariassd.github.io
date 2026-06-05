@@ -79,7 +79,7 @@ const Printable = ({ Data, i18 }) => {
           <Col span={6}>
             <a href='/'>
               <Avatar
-                src={process.env.PUBLIC_URL + '/assets/img/LuisArias.jpeg'}
+                src={process.env.PUBLIC_URL + '/assets/img/avatar.png'}
                 size={{ xs: 1, sm: 64, md: 80, lg: 128, xl: 128, xxl: 200 }}
                 icon={<AntDesignOutlined />}
               />
