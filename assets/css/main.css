@@ -3182,6 +3182,11 @@ small {
 a {
   color: var(--theme-color);
 }
+.link-style, a {
+  color: var(--theme-color);
+  border: 0;
+  background-color: transparent;
+}
 
 a:hover,
 a:focus {
